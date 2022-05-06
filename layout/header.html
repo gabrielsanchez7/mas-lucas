@@ -1,0 +1,35 @@
+<header>
+    <div class="container header">
+        +lucas Logo
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <a href="/home">Inicio</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="/products">Productos</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="/support">Soporte</a>
+            </li>
+            <li class="header__user">
+                <if data-condition="unlogged">
+                    <span class="header__user-action">Iniciar Sesi&oacute;n</span>
+                    <span class="header__user-icon"></span>
+                </if>
+                <if data-condition="logged">
+                    <span class="header__user-action">Andr&eacute;s P.</span>
+                    <span class="header__user-icon"></span>
+                    <ul class="submenu">
+                        <li class="submenu__item submenu__item--name">
+                            Andr&eacute;s Paredes S.
+                            <span>
+                                <i class="fa-solid fa-heart"></i>
+                                Emprendedor
+                            </span>
+                        </li>
+                    </ul>
+                </if>
+            </li>
+        </ul>
+    </div>
+</header>

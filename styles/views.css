@@ -1,0 +1,66 @@
+.page {
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: #004FB9;
+    border-bottom-right-radius: 90px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.banner__hero {
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 70px;
+}
+
+.banner__hero b {
+    display: inline-block;
+    position: relative;
+    color: inherit;
+    transform-style: preserve-3d;
+}
+
+/* .banner__hero b:last-child {
+    padding: 8px 40px 15px 40px;
+} */
+
+/* .banner__hero b:last-child::before {
+    content: '';
+    transform: translateZ(-1px);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: skyblue;
+    clip-path: polygon(0 8%, 100% 15%, 92% 82%, 8% 90%);
+}
+
+.banner__hero b:last-child [class^="corner"] {
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    top: 8px;
+    left: 6px;
+    background-color: skyblue;
+    border: 5px solid #004FB9;
+} */
+
+/* .banner__hero b:last-child svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-1px);
+} */
