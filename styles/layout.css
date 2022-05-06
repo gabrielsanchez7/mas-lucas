@@ -1,121 +1,154 @@
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 .header {
-    padding: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .header__menu-item {
-    display: inline-block;
-    color: white;
+	display: inline-block;
+	color: white;
 }
 
 .header__menu-item--active {
-    position: relative;
-    transform-style: preserve-3d;
+	position: relative;
+	transform-style: preserve-3d;
 }
 
 .header__menu-item a {
-    display: block;
-    padding: 5px 18px;
+	display: block;
+	padding: 5px 18px;
 }
 
 .header__menu-item--active::before {
-    content: '';
-    top: 0;
-    left: 0;
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #F46C8F;
-    transform: translateZ(-1px);
-    border-radius: 10px;
-    clip-path: polygon(0 12%, 100% 0, 90% 100%, 10% 90%);
+	content: '';
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #F46C8F;
+	transform: translateZ(-1px);
+	border-radius: 10px;
+	clip-path: polygon(0 12%, 100% 0, 90% 100%, 10% 90%);
 }
 
 .header__user {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 20px;
-    cursor: pointer;
-    position: relative;
+	display: inline-flex;
+	align-items: center;
+	margin-left: 20px;
+	position: relative;
 }
 
 .header__user-action {
-    background-color: white;
-    line-height: 22px;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 2px 18px 0 15px;
-    border-radius: 15px 0 0 15px;
-    color: #221E78;
+	cursor: pointer;
+	background-color: white;
+	line-height: 22px;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 2px 18px 0 15px;
+	border-radius: 15px 0 0 15px;
+	color: #221E78;
 }
 
 .header__user-icon {
-    display: block;
-    height: 46px;
-    width: 46px;
-    background-color: #F46C8F;
-    border: 2px solid #221E78;
-    border-radius: 25px;
-    margin-left: -10px;
+	display: block;
+	height: 46px;
+	width: 46px;
+	background-color: #F46C8F;
+	border: 2px solid #221E78;
+	border-radius: 25px;
+	margin-left: -10px;
 }
 
 .header .submenu {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #221E78;
-    list-style: none;
-    padding: 20px 25px;
-    min-width: 225px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+	position: absolute;
+	top: 60px;
+	right: 0;
+	background-color: #221E78;
+	list-style: none;
+	padding: 20px 25px;
+	min-width: 250px;
+	border-radius: 15px;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+	display: none;
 }
 
 .header .submenu::before {
-    content: '';
-    display: block;
-    height: 20px;
-    width: 20px;
-    background-color: #221E78;
-    position: absolute;
-    top: -6px;
-    right: 14px;
-    border-radius: 3px;
-    transform: rotate(45deg) skew(10deg, 10deg);
+	content: '';
+	display: block;
+	height: 20px;
+	width: 20px;
+	background-color: #221E78;
+	position: absolute;
+	top: -6px;
+	right: 13px;
+	border-radius: 3px;
+	transform: rotate(45deg) skew(10deg, 10deg);
 }
 
 .header .submenu__item {
-    color: white;
+	color: white;
+}
+
+.header .submenu__item--active {
+	color: #F46C8F;
 }
 
 .header .submenu__item--name {
-    color: #00B9EB;
-    font-size: 18px;
-    font-weight: 500;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 184, 235, 0.25);
+	color: #00B9EB;
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0, 184, 235, 0.25);
+	margin-bottom: 10px;
 }
 
 .header .submenu__item--name span {
-    display: flex;
-    align-items: center;
-    grid-gap: 5px;
-    color: white;
-    font-weight: 300;
-    font-size: 15px;
-    margin-top: 3px;
+	display: flex;
+	align-items: center;
+	grid-gap: 5px;
+	color: white;
+	font-weight: 300;
+	font-size: 14px;
+	margin-top: 3px;
 }
 
 .header .submenu__item--name span i {
-    color: #FFBE00;
+	color: #FFBE00;
+}
+
+.header .submenu__item:not(:first-child):not(:last-child) {
+	font-size: 20px;
+	line-height: 34px;
+	font-weight: 300;
+}
+
+.header .submenu__item:not(:first-child):not(:last-child) i {
+	color: #F46C8F;
+	margin-right: 5px;
+}
+
+.header .submenu__item--logout {
+	color: rgba(0, 184, 235, 0.4);
+	border-top: 1px solid rgba(0, 184, 235, 0.25);
+	font-size: 18px;
+	line-height: 30px;
+	padding: 5px 0 0;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.header .submenu__item--logout i {
+	color: inherit;
+	margin: 5px;
+	padding-top: 5px;
 }

@@ -1,35 +1,63 @@
 <header>
-    <div class="container header">
-        +lucas Logo
-        <ul class="header__menu">
-            <li class="header__menu-item">
-                <a href="/home">Inicio</a>
-            </li>
-            <li class="header__menu-item">
-                <a href="/products">Productos</a>
-            </li>
-            <li class="header__menu-item">
-                <a href="/support">Soporte</a>
-            </li>
-            <li class="header__user">
-                <if data-condition="unlogged">
-                    <span class="header__user-action">Iniciar Sesi&oacute;n</span>
-                    <span class="header__user-icon"></span>
-                </if>
-                <if data-condition="logged">
-                    <span class="header__user-action">Andr&eacute;s P.</span>
-                    <span class="header__user-icon"></span>
-                    <ul class="submenu">
-                        <li class="submenu__item submenu__item--name">
-                            Andr&eacute;s Paredes S.
-                            <span>
-                                <i class="fa-solid fa-heart"></i>
-                                Emprendedor
-                            </span>
-                        </li>
-                    </ul>
-                </if>
-            </li>
-        </ul>
-    </div>
+	<div class="container header">
+		+lucas Logo
+		<ul class="header__menu">
+			<li class="header__menu-item">
+				<a href="/home">Inicio</a>
+			</li>
+			<li class="header__menu-item">
+				<a href="/products">Productos</a>
+			</li>
+			<li class="header__menu-item">
+				<a href="/support">Soporte</a>
+			</li>
+			<li class="header__user">
+				<if data-condition="unlogged">
+					<span class="header__user-action">Iniciar Sesi&oacute;n</span>
+					<span class="header__user-icon"></span>
+				</if>
+				<if data-condition="logged">
+					<span class="header__user-action">Andr&eacute;s P.</span>
+					<span class="header__user-icon"></span>
+					<ul class="submenu">
+						<li class="submenu__item submenu__item--name">
+							Andr&eacute;s Paredes S.
+							<span>
+								<i class="fa-solid fa-heart"></i>
+								Emprendedor
+							</span>
+						</li>
+						<li class="submenu__item submenu__item--active">
+							<i class="fa-solid fa-atom"></i>
+							<a href="javascript:void(0)">Mis Lucas</a>
+						</li>
+						<li class="submenu__item">
+							<i class="fa-solid fa-atom"></i>
+							<a href="javascript:void(0)">Capacitaciones</a>
+						</li>
+						<li class="submenu__item">
+							<i class="fa-solid fa-atom"></i>
+							<a href="javascript:void(0)">Cashout</a>
+						</li>
+						<li class="submenu__item">
+							<i class="fa-solid fa-atom"></i>
+							<a href="javascript:void(0)">Novedades</a>
+						</li>
+						<li class="submenu__item">
+							<i class="fa-solid fa-atom"></i>
+							<a href="javascript:void(0)">Oferta comercial</a>
+						</li>
+						<li class="submenu__item">
+							<i class="fa-solid fa-atom"></i>
+							<a href="javascript:void(0)">Esquema</a>
+						</li>
+						<li class="submenu__item submenu__item--logout">
+							<i class="fa-solid fa-power-off"></i>
+							Cerrar sesi&oacute;n
+						</li>
+					</ul>
+				</if>
+			</li>
+		</ul>
+	</div>
 </header>
