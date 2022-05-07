@@ -2,7 +2,12 @@ const include = (selector) => {
 
     const tag = document.querySelector(`[data-include="${selector}"]`)
 
-    if(selector != 'router') {
+    if(selector.startsWith('comp-')) {
+        const path = selector.split('comp-')[1]
+        fetch(`./components/${path}.html`)
+            .then(file => file.text())
+            .then(text => tag.outerHTML = text)
+    } else if(selector != 'router') {
         fetch(`./layout/${selector}.html`)
             .then(file => file.text())
             .then(text => {
@@ -31,3 +36,17 @@ const include = (selector) => {
 include('header')
 include('router')
 include('footer')
+
+/** Check if layout has loaded */
+const layoutInterval = setInterval(() => {
+	const header = document.querySelector('header')
+	const footer = document.querySelector('footer')
+	if (header != null && footer != null) {
+		loadImports()
+		clearInterval(layoutInterval)
+	}
+}, 10)
+
+const loadImports = () => {
+    // include('comp-modal-login')
+}

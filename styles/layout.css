@@ -3,13 +3,23 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 2;
 }
 
 .header {
 	padding: 30px 0;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
+}
+
+.header__logo img {
+	display: block;
+	width: 140px;
+}
+
+.header__menu {
+	padding-top: 20px;
 }
 
 .header__menu-item {
@@ -24,7 +34,8 @@ header {
 
 .header__menu-item a {
 	display: block;
-	padding: 5px 18px;
+	padding: 5px 20px;
+	font-weight: 500;
 }
 
 .header__menu-item--active::before {
@@ -35,7 +46,7 @@ header {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-color: #F46C8F;
+	background-color: var(--pink);
 	transform: translateZ(-1px);
 	border-radius: 10px;
 	clip-path: polygon(0 12%, 100% 0, 90% 100%, 10% 90%);
@@ -51,34 +62,35 @@ header {
 .header__user-action {
 	cursor: pointer;
 	background-color: white;
-	line-height: 22px;
+	line-height: 26px;
 	font-size: 14px;
 	font-weight: 500;
-	padding: 2px 18px 0 15px;
+	padding: 0 18px 0 15px;
 	border-radius: 15px 0 0 15px;
-	color: #221E78;
+	color: var(--blue-text);
 }
 
 .header__user-icon {
 	display: block;
 	height: 46px;
 	width: 46px;
-	background-color: #F46C8F;
-	border: 2px solid #221E78;
+	background-color: var(--pink);
+	border: 2px solid var(--blue-text);
 	border-radius: 25px;
 	margin-left: -10px;
+    cursor: pointer;
 }
 
 .header .submenu {
 	position: absolute;
 	top: 60px;
 	right: 0;
-	background-color: #221E78;
+	background-color: var(--blue-text);
 	list-style: none;
 	padding: 20px 25px;
 	min-width: 250px;
 	border-radius: 15px;
-	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 6px 0 var(--gray-shadow);
 	display: none;
 }
 
@@ -87,7 +99,7 @@ header {
 	display: block;
 	height: 20px;
 	width: 20px;
-	background-color: #221E78;
+	background-color: var(--blue-text);
 	position: absolute;
 	top: -6px;
 	right: 13px;
@@ -100,11 +112,11 @@ header {
 }
 
 .header .submenu__item--active {
-	color: #F46C8F;
+	color: var(--pink);
 }
 
 .header .submenu__item--name {
-	color: #00B9EB;
+	color: var(--sky);
 	font-size: 18px;
 	font-weight: 500;
 	padding-bottom: 15px;
@@ -123,7 +135,7 @@ header {
 }
 
 .header .submenu__item--name span i {
-	color: #FFBE00;
+	color: var(--yellow);
 }
 
 .header .submenu__item:not(:first-child):not(:last-child) {
@@ -133,7 +145,7 @@ header {
 }
 
 .header .submenu__item:not(:first-child):not(:last-child) i {
-	color: #F46C8F;
+	color: var(--pink);
 	margin-right: 5px;
 }
 
