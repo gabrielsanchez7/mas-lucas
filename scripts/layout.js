@@ -74,10 +74,6 @@ const toggleSubmenu = () => {
 			const visible = window.getComputedStyle(submenu).display != 'none'
 
 			if(parent == null && visible) { toggle() }
-			// console.log(parent, callers.includes(parent?.getAttribute('class')), visible)
-			// if(parent == null && callers.includes(parent?.getAttribute('class')) && visible) {
-			// 	submenu.style.display = 'none'
-			// }
 		})
 	}
 

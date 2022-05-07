@@ -23,7 +23,7 @@ a {
     width: 100%;
 }
 
-[data-condition] { display: none !important; }
+[data-condition], [hidden] { display: none !important; }
 
 button, input {
     appearance: none;
@@ -34,3 +34,22 @@ button, input {
 
 button { cursor: pointer; }
 button:active { transform: translateY(1px); }
+
+.shape {
+    position: relative;
+}
+
+.shape__box {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.shape__text {
+    position: relative;
+    z-index: 1;
+    color: inherit;
+}

@@ -14,8 +14,8 @@ const include = (selector) => {
                 tag.outerHTML = text
                 const headerTag = document.querySelector('header')
                 const pathname = location.pathname == "/" ? '/home' : location.pathname
-                const currentPage = headerTag.querySelector(`.header__menu-item a[href="${pathname}"]`)
-                currentPage.classList.add('header__menu-item--active')
+                const currentPage = headerTag.querySelector(`.header__menu-item a[href="${pathname}"] .shape__box`)
+                currentPage.removeAttribute('hidden')
             })
     } else {
         const pathname = location.pathname.split('/')[1]
