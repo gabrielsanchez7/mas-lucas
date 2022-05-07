@@ -49,6 +49,7 @@
     font-size: 65px;
     font-weight: 300;
     line-height: 72px;
+    padding-bottom: 40px;
 }
 
 .banner__hero b {
@@ -59,6 +60,6 @@
 
 .banner__image {
     display: block;
-    width: 850px;
+    width: 820px;
     max-width: 50vw;
 }
