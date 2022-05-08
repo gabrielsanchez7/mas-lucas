@@ -1,11 +1,11 @@
 /* Commons */
-@import './common/vars.css';
-@import './common/global.css';
-@import './common/components.css';
+@import './commons/vars.css';
+@import './commons/global.css';
+@import './commons/auth.css';
 
 /* Layout */
 @import './layout/header.css';
 @import './layout/footer.css';
 
 /* Views */
-@import './views/home.css';
+@import './pages/home.css';

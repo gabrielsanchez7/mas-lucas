@@ -2,13 +2,13 @@ const include = (selector) => {
 
     const tag = document.querySelector(`[data-include="${selector}"]`)
 
-    if(selector.startsWith('comp-')) {
-        const path = selector.split('comp-')[1]
-        fetch(`./components/${path}.html`)
+    if(selector.startsWith('common-')) {
+        const path = selector.split('common-')[1]
+        fetch(`/views/commons/${path}.html`)
             .then(file => file.text())
             .then(text => tag.outerHTML = text)
     } else if(selector != 'router') {
-        fetch(`./layout/${selector}.html`)
+        fetch(`/views/layout/${selector}.html`)
             .then(file => file.text())
             .then(text => {
                 tag.outerHTML = text
@@ -19,7 +19,7 @@ const include = (selector) => {
             })
     } else {
         const pathname = location.pathname.split('/')[1]
-        const view = pathname == "" ? `./views/home.html` : `./views/${pathname}.html`
+        const view = pathname == "" ? `/views/pages/home.html` : `/views/pages/${pathname}.html`
         
         fetch(view)
             .then(file => file.text())
@@ -48,5 +48,5 @@ const layoutInterval = setInterval(() => {
 }, 10)
 
 const loadImports = () => {
-    // include('comp-modal-login')
+    include('common-modal-login')
 }
