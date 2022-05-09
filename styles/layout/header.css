@@ -40,6 +40,10 @@ header {
 	position: relative;
 }
 
+.header__user:active {
+	transform: translateY(1px);
+}
+
 .header__user-action {
 	cursor: pointer;
 	background-color: white;

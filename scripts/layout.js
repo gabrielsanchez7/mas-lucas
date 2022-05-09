@@ -30,13 +30,37 @@ const loadUserMenu = () => {
 /** Click on login button */
 const login = () => {
 	const callers = ['.header__user-action', '.header__user-icon']
+	
 	callers.forEach(it => {
 		const btn = document.querySelector(it)
+
+		btn.removeEventListener('click', null)
 		btn.addEventListener('click', _ => {
-			localStorage.setItem('login', 'true')
-			location.reload()
+			const modal = document.querySelector('#modal-login')
+			const caller = document.querySelector('.header__user')
+			const form = document.querySelector('#modal-login .form')
+			const closeBtn = document.querySelector('#modal-login .modal__close')
+			
+			modal.style.display = 'flex'
+			caller.style.zIndex = '101'
+			setTimeout(() => {
+				modal.style.opacity = '1'
+				form.style.opacity = '1'
+				form.style.transform = 'translateY(0)'
+			}, 100)
+
+			closeBtn.removeEventListener('click', null)
+			closeBtn.addEventListener('click', _ => {
+				form.style.removeProperty('transform')
+				form.style.removeProperty('opacity')
+				modal.style.removeProperty('opacity')
+				setTimeout(() => {
+					modal.style.removeProperty('display')
+				}, 300)
+			})
 		})
 	})
+
 }
 
 /** Click on logout button */

@@ -1,5 +1,14 @@
+#modal-login {
+	display: none;
+	opacity: 0;
+	transition: 0.3s;
+}
+
 .form {
 	width: 100%;
+	opacity: 0;
+	transform: translateY(100vh);
+	transition: 0.2s;
 }
 
 .auth-form {
