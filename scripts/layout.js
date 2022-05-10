@@ -66,14 +66,19 @@ const login = () => {
 				})
 			})
 
-			openOtherAction('login', 'signup')
+			const tooltip = document.querySelector('#modal-auth .tooltip')
+			tooltip.innerHTML = '<b>&iexcl;Hola te estaba esperando!</b> para seguir ganando platita extra juntos.'
+
+			openForm('signup')
+			openForm('reset')
+
 		})
 	})
 
-	const openOtherAction = (from, to) => {
-		const fromForm = document.querySelector(`#modal-auth .auth-form--${from}`)
-		const toForm = document.querySelector(`#modal-auth .auth-form--${to}`)
-		const fromBtn = fromForm.querySelector('.auth-form__other-action')
+	const openForm = (form) => {
+		const fromBtn = document.querySelector(`#modal-auth #btn-${form}`)
+		const fromForm = fromBtn.closest('.auth-form')
+		const toForm = document.querySelector(`#modal-auth .auth-form--${form}`)
 
 		fromBtn.addEventListener('click', _ => {
 			fromForm.style.transform = 'translateY(-100vh)'
@@ -86,16 +91,45 @@ const login = () => {
 			}, 100)
 	
 			let tooltipMessage
-			if(to == 'signup') {
+			if(form == 'signup') {
 				tooltipMessage = '<b>&iexcl;Excelente!</b> est&aacute;s a un paso de empezar a ganar platita extra de la forma m&aacute;s sencilla.'
-			} else if(to == 'login') {
+			} else if(form == 'login') {
 				tooltipMessage = '<b>&iexcl;Hola te estaba esperando!</b> para seguir ganando platita extra juntos.'
+			} else if(form == 'reset') {
+				tooltipMessage = '<b>&iexcl;Hola! &iquest;Olvidaste tu contrase&ntilde;a?</b> No te preocupes, cambiarlo es facilito.'
 			}
 	
-			console.log({tooltipMessage})
 			const tooltip = document.querySelector('#modal-auth .tooltip')
 			tooltip.innerHTML = tooltipMessage
 		})
+
+		if(form == 'reset') {
+			const resetMethod = (method) => {
+				const caller = toForm.querySelector(`.reset-option--${method}`)
+				const opts = toForm.querySelector('.reset-options')
+				// const 
+				caller.addEventListener('click', _ => {
+					if(method == 'phone') {
+						
+					} else {
+
+					}
+				})
+			}
+
+			resetMethod('phone')
+			resetMethod('mail')
+			// const byPhone = toForm.querySelector('.reset-option--phone')
+			// const byMail = toForm.querySelector('.reset-option--mail')
+
+			// const resetMethod = e => {
+			// 	const t = e.target.closest('.reset-option')
+			// 	console.log({t})
+			// }
+
+			// byPhone.addEventListener('click', resetMethod)
+			// byMail.addEventListener('click', resetMethod)
+		}
 	}
 
 }
