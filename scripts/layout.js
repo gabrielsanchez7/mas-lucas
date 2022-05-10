@@ -36,30 +36,67 @@ const login = () => {
 
 		btn.removeEventListener('click', null)
 		btn.addEventListener('click', _ => {
-			const modal = document.querySelector('#modal-login')
+			const modal = document.querySelector('#modal-auth')
 			const caller = document.querySelector('.header__user')
-			const form = document.querySelector('#modal-login .form')
-			const closeBtn = document.querySelector('#modal-login .modal__close')
+			const form = document.querySelector('#modal-auth .auth-form')
+			const closeBtn = document.querySelectorAll('#modal-auth .modal__close')
 			
 			modal.style.display = 'flex'
 			caller.style.zIndex = '101'
+			form.style.display = 'block'
+
 			setTimeout(() => {
 				modal.style.opacity = '1'
 				form.style.opacity = '1'
 				form.style.transform = 'translateY(0)'
 			}, 100)
 
-			closeBtn.removeEventListener('click', null)
-			closeBtn.addEventListener('click', _ => {
-				form.style.removeProperty('transform')
-				form.style.removeProperty('opacity')
-				modal.style.removeProperty('opacity')
-				setTimeout(() => {
-					modal.style.removeProperty('display')
-				}, 300)
+			closeBtn.forEach(it => {
+				it.removeEventListener('click', null)
+				it.addEventListener('click', _ => {
+					const currentForm = it.closest('.auth-form')
+					currentForm.style.removeProperty('transform')
+					currentForm.style.removeProperty('opacity')
+					modal.style.removeProperty('opacity')
+					setTimeout(() => {
+						modal.style.removeProperty('display')
+						const allForms = document.querySelectorAll('#modal-auth .auth-form')
+						allForms.forEach(f => f.removeAttribute('style'))
+					}, 300)
+				})
 			})
+
+			openOtherAction('login', 'signup')
 		})
 	})
+
+	const openOtherAction = (from, to) => {
+		const fromForm = document.querySelector(`#modal-auth .auth-form--${from}`)
+		const toForm = document.querySelector(`#modal-auth .auth-form--${to}`)
+		const fromBtn = fromForm.querySelector('.auth-form__other-action')
+
+		fromBtn.addEventListener('click', _ => {
+			fromForm.style.transform = 'translateY(-100vh)'
+			
+			setTimeout(() => {
+				fromForm.style.removeProperty('opacity')
+				fromForm.style.removeProperty('display')
+				toForm.style.opacity = '1'
+				toForm.style.transform = 'translateY(0)'
+			}, 100)
+	
+			let tooltipMessage
+			if(to == 'signup') {
+				tooltipMessage = '<b>&iexcl;Excelente!</b> est&aacute;s a un paso de empezar a ganar platita extra de la forma m&aacute;s sencilla.'
+			} else if(to == 'login') {
+				tooltipMessage = '<b>&iexcl;Hola te estaba esperando!</b> para seguir ganando platita extra juntos.'
+			}
+	
+			console.log({tooltipMessage})
+			const tooltip = document.querySelector('#modal-auth .tooltip')
+			tooltip.innerHTML = tooltipMessage
+		})
+	}
 
 }
 

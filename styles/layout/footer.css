@@ -3,11 +3,34 @@ footer {
   background-size: cover;
   padding-top: 100px;
   margin-top: 100px;
+  position: relative;
+}
+
+.footer::before, .footer::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  display: block;
+  width: 45%;
+  height: 45%;
+  background-image: url(/images/layout/footer-deco.png);
+  background-position: 10px 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer::after {
+  left: unset;
+  right: 0;
+  background-position: 10px 100%;
+  transform: scaleX(-1);
 }
 
 .footer {
   text-align: center;
   padding: 60px 40px 40px;
+  position: relative;
 }
 
 .footer__title {

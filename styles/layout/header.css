@@ -40,7 +40,7 @@ header {
 	position: relative;
 }
 
-.header__user:active {
+.header__user-action:active, .header__user-icon:active {
 	transform: translateY(1px);
 }
 
@@ -60,7 +60,8 @@ header {
 	height: 46px;
 	width: 46px;
 	margin-left: -10px;
-    cursor: pointer;
+	cursor: pointer;
+	z-index: 2;
 }
 
 .header .submenu {

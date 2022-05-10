@@ -48,5 +48,5 @@ const layoutInterval = setInterval(() => {
 }, 10)
 
 const loadImports = () => {
-    include('common-modal-login')
+    include('common-modal-auth')
 }
