@@ -62,6 +62,12 @@ const login = () => {
 						modal.style.removeProperty('display')
 						const allForms = document.querySelectorAll('#modal-auth .auth-form')
 						allForms.forEach(f => f.removeAttribute('style'))
+
+						const resets = ['.reset-options', '.reset-phone', '.reset-mail', '.reset-code']
+						resets.forEach(rst => {
+							rst = modal.querySelector(rst)
+							rst.removeAttribute('style')
+						})
 					}, 300)
 				})
 			})
@@ -104,31 +110,29 @@ const login = () => {
 		})
 
 		if(form == 'reset') {
+			let currentMethod = ''
 			const resetMethod = (method) => {
-				const caller = toForm.querySelector(`.reset-option--${method}`)
-				const opts = toForm.querySelector('.reset-options')
-				// const 
+				const caller = toForm.querySelector(method != 'code' ? `.reset-option--${method}` : '.reset__send')
+				
+				caller.removeEventListener('click', null)
 				caller.addEventListener('click', _ => {
-					if(method == 'phone') {
-						
-					} else {
+					const opts = toForm.querySelector(method != 'code' ? '.reset-options' : `.reset-${currentMethod}`)
+					const optResume = toForm.querySelector(method != 'code' ? `.reset-${method}` : '.reset-code')
+					opts.style.opacity = '0'
+					
+					setTimeout(() => {
+						optResume.style.display = 'flex'
+						opts.style.display = 'none'
+						optResume.style.opacity = '1'
+					}, 350)
 
-					}
+					currentMethod = method
 				})
 			}
 
 			resetMethod('phone')
 			resetMethod('mail')
-			// const byPhone = toForm.querySelector('.reset-option--phone')
-			// const byMail = toForm.querySelector('.reset-option--mail')
-
-			// const resetMethod = e => {
-			// 	const t = e.target.closest('.reset-option')
-			// 	console.log({t})
-			// }
-
-			// byPhone.addEventListener('click', resetMethod)
-			// byMail.addEventListener('click', resetMethod)
+			resetMethod('code')
 		}
 	}
 
