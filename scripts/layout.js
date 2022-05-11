@@ -125,7 +125,19 @@ const login = () => {
 						opts.style.display = 'none'
 						optResume.style.opacity = '1'
 					}, 350)
+					
+					let formMessage = ''
+					const receive = method == 'phone' ? 'mensaje de texto' : 'correo electr&oacute;nico'
+					const via = currentMethod == 'phone' ? 'n&uacute;mero' : 'correo'
+					
+					console.log({method})
+					if(['phone', 'mail'].includes(method)) { formMessage = `Te enviaremos un c&oacute;digo a tu ${via} registrado.` }
+					// else if(currentMethod == 'code') { formMessage = `Ingresa el c&oacute;digo que te enviamos por ${receive}.` }
+					// else { formMessage = `Te enviaremos un c&oacute;digo a tu ${via} registrado.` }
 
+					const messageTag = toForm.querySelector('.auth-form__subtitle')
+					messageTag.innerHTML = formMessage
+					
 					currentMethod = method
 				})
 			}
