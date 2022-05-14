@@ -178,11 +178,12 @@
 	border-radius: 4px;
 	background-color: var(--white);
 	box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+	padding-top: 1px;
 }
 
-.auth-form__check-square i {
-	color: var(--sky);
-	font-size: 12px;
+.auth-form__check-square img {
+	display: block;
+	width: 12px;
 }
 
 .auth-form--login .auth-form__check-label, .auth-form__forgot {
@@ -275,7 +276,8 @@
 	display: block;
 	height: 40px;
 	width: 40px;
-	transform: skew(0, 45deg) translateZ(-1px);
+	transform: skew(0, 45deg) translateZ(-1px) rotate(-8deg);
+	border-bottom-right-radius: 5px;
 }
 
 .tooltip b { color: inherit; }
@@ -331,7 +333,8 @@
 
 .reset-phone,
 .reset-mail,
-.reset-code {
+.reset-code,
+.reset-confirm {
 	display: none;
 	opacity: 0;
 	transition: 0.3s;
@@ -350,7 +353,7 @@
 }
 
 .reset__send,
-.reset-code__confirm {
+.reset__confirm {
 	display: block;
 	margin: auto;
 	background-color: var(--pink);
@@ -377,4 +380,21 @@
 	font-size: 24px;
 	font-weight: 700;
 	color: var(--green);
+	-moz-appearance: textfield;
 }
+
+.reset-code__input-val::-webkit-outer-spin-button,
+.reset-code__input-val::-webkit-inner-spin-button {
+	display: none;
+	appearance: none;
+	margin: 0;
+}
+
+.reset-confirm { grid-gap: unset; }
+
+.auth-form--reset .auth-form__input:nth-child(1) .auth-form__input-dot,
+.auth-form--reset .auth-form__input:nth-child(1) .auth-form__input-dot::after { background-color: var(--sky); }
+.auth-form--reset .auth-form__input:nth-child(2) .auth-form__input-dot { background-color: var(--green); }
+
+.reset-confirm .auth-form__input { width: 100%; }
+.reset-confirm .reset__confirm { margin-top: 20px; }

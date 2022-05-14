@@ -1,7 +1,10 @@
 /* Commons */
+@import './commons/glide.core.min.css';
+@import './commons/nouislider.min.css';
 @import './commons/vars.css';
 @import './commons/global.css';
 @import './commons/auth.css';
+@import './commons/chat-bot.css';
 
 /* Layout */
 @import './layout/header.css';
@@ -9,3 +12,5 @@
 
 /* Views */
 @import './pages/home.css';
+@import './pages/mis-lucas.css';
+@import './pages/products.css';

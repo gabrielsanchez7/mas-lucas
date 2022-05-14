@@ -21,10 +21,13 @@
 					<input class="auth-form__input-val" type="password" placeholder="Contrase&ntilde;a" />
 				</div>
 				<div class="auth-form__options">
-					<div class="auth-form__check">
-						<span class="auth-form__check-square"><i class="fa-solid fa-check"></i></span>
-						<span class="auth-form__check-label">Recordar mi cuenta</span>
-					</div>
+					<label class="checkbox auth-form__check">
+						<input class="checkbox__value" type="checkbox" hidden>
+						<span class="checkbox__icon auth-form__check-square">
+							<img src="/images/common/icon-check.png" hidden>
+						</span>
+						<span class="checkbox__label auth-form__check-label">Recordar mi cuenta</span>
+					</label>
 					<button id="btn-reset" class="auth-form__forgot" type="button">&iquest;Olvidaste tu contrase&ntilde;a?</button>
 				</div>
 				<button id="btn-login" class="auth-form__submit" type="button">Iniciar Sesi&oacute;n</button>
@@ -62,14 +65,20 @@
 					<span class="auth-form__input-dot"></span>
 					<input class="auth-form__input-val" type="password" placeholder="Crea una contrase&ntilde;a" />
 				</div>
-				<div class="auth-form__check auth-form__check--tyc">
-					<span class="auth-form__check-square"><i class="fa-solid fa-check"></i></span>
-					<span class="auth-form__check-label">Aceptar los <b>t&eacute;rminos y condiciones</b></span>
-				</div>
-				<div class="auth-form__check">
-					<span class="auth-form__check-square"><i class="fa-solid fa-check"></i></span>
-					<span class="auth-form__check-label">Acepto el uso de mi informaci&oacute;n para <b>fines adicionales</b></span>
-				</div>
+				<label class="checkbox auth-form__check auth-form__check--tyc">
+					<input class="checkbox__value" type="checkbox" hidden>
+					<span class="checkbox__icon auth-form__check-square">
+						<img src="/images/common/icon-check.png" hidden>
+					</span>
+					<span class="checkbox__label auth-form__check-label">Aceptar los <b>t&eacute;rminos y condiciones</b></span>
+				</label>
+				<label class="checkbox auth-form__check">
+					<input class="checkbox__value" type="checkbox" hidden>
+					<span class="checkbox__icon auth-form__check-square">
+						<img src="/images/common/icon-check.png" hidden>
+					</span>
+					<span class="checkbox__label auth-form__check-label">Acepto el uso de mi informaci&oacute;n para <b>fines adicionales</b></span>
+				</label>
 				<button class="auth-form__submit" type="button">Registrarme</button>
 			</form>
 
@@ -78,8 +87,7 @@
 					<img src="/images/common/icon-close.png" alt="Cerrar">
 				</button>
 				<h3 class="auth-form__title">Restablecer <br> contrase&ntilde;a</h3>
-				<!-- <h4 class="auth-form__subtitle">Selecciona la opci&oacute;n con la que deseas <br> restablecer tu contrase&ntilde;a</h4> -->
-				<h4 class="auth-form__subtitle"></h4>
+				<h4 class="auth-form__subtitle">Selecciona la opci&oacute;n con la que deseas <br> restablecer tu contrase&ntilde;a</h4>
 				<div class="reset-options">
 					<div class="reset-option reset-option--phone">
 						<button class="reset-option__icon shape" type="button">
@@ -106,13 +114,24 @@
 				</div>
 				<div class="reset-code">
 					<div class="reset-code__input">
-						<input class="reset-code__input-val" type="text">
-						<input class="reset-code__input-val" type="text">
-						<input class="reset-code__input-val" type="text">
-						<input class="reset-code__input-val" type="text">
-						<input class="reset-code__input-val" type="text">
+						<input class="reset-code__input-val" type="number">
+						<input class="reset-code__input-val" type="number">
+						<input class="reset-code__input-val" type="number">
+						<input class="reset-code__input-val" type="number">
+						<input class="reset-code__input-val" type="number">
 					</div>
-					<button class="reset-code__confirm" type="button">Confirmar</button>
+					<button class="reset__confirm" type="button">Confirmar</button>
+				</div>
+				<div class="reset-confirm">
+					<div class="auth-form__input">
+						<span class="auth-form__input-dot"></span>
+						<input class="auth-form__input-val" type="text" placeholder="Contrase&ntilde;a" />
+					</div>
+					<div class="auth-form__input">
+						<span class="auth-form__input-dot"></span>
+						<input class="auth-form__input-val" type="password" placeholder="Confirmar contrase&ntilde;a" />
+					</div>
+					<button class="reset__confirm" type="button">Restablecer</button>
 				</div>
 			</form>
 		</div>

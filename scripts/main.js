@@ -1,3 +1,5 @@
+import './glide.min.js'
+import './nouislider.min.js'
 import './imports.js'
 import './layout.js'
 import './views.js'
