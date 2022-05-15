@@ -1,4 +1,4 @@
-import * as Functions from './functions.js'
+import * as Functions from '../commons/functions.js'
 
 /** Valida que los componentes principales se hayan cargado */
 const layoutInterval = setInterval(() => {
@@ -12,23 +12,8 @@ const layoutInterval = setInterval(() => {
 
 const loadScripts = () => {
 
-	scrollButton()
 	changeTab()
-	carousel()
-	priceSelector()
 
-}
-
-/** [HOME] Click en el botón de scroll en el banner principal */
-const scrollButton = () => {
-	const icon = document.querySelector('.banner__scroll')
-	const heroSize = document.querySelector('.banner').clientHeight
-	icon?.addEventListener('click', _ => {
-		scroll({
-			top: heroSize + 1,
-			behavior: "smooth"
-		})
-	})
 }
 
 /** [MIS LUCAS] Evento para cambiar de tabs */
@@ -50,32 +35,5 @@ const changeTab = () => {
 			const tableSibs = Functions.allSiblings(currentTable)
 			tableSibs.forEach(sib => sib.classList.remove('lucas-table--active'))
 		})
-	})
-}
-
-/** [PRODUCTOS] Carrusel */
-const carousel = () => {
-	// const items = document.querySelectorAll('.carousel__item')
-	new Glide('.glide', {
-		autoplay: 6000,
-		type: 'carousel'
-	}).mount()
-}
-
-/** [PRODUCTOS] Selector de rango de precio */
-const priceSelector = () => {
-	const slider = document.querySelector('.store__range-slider')
-	noUiSlider.create(slider, {
-		start: [20, 80],
-		connect: true,
-		tooltips: true,
-		format: {
-			from: v => v,
-			to: v => parseInt(v)
-		},
-		range: {
-			min: 0,
-			max: 100
-		}
 	})
 }

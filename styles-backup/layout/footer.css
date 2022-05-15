@@ -5,8 +5,9 @@ footer {
   margin-top: 100px;
   position: relative;
 }
-footer .footer::before, footer .footer::after {
-  content: "";
+
+.footer::before, .footer::after {
+  content: '';
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -18,18 +19,21 @@ footer .footer::before, footer .footer::after {
   background-repeat: no-repeat;
   background-size: contain;
 }
-footer .footer::after {
+
+.footer::after {
   left: unset;
   right: 0;
   background-position: 10px 100%;
   transform: scaleX(-1);
 }
-footer .footer {
+
+.footer {
   text-align: center;
   padding: 60px 40px 40px;
   position: relative;
 }
-footer .footer__title {
+
+.footer__title {
   font-size: 44px;
   font-weight: 700;
   color: white;
@@ -38,7 +42,8 @@ footer .footer__title {
   position: relative;
   z-index: 1;
 }
-footer .footer__action-download {
+
+.footer__action-download {
   color: white;
   padding: 12px 25px 18px;
   font-size: 26px;
@@ -46,8 +51,9 @@ footer .footer__action-download {
   position: relative;
   transform-style: preserve-3d;
 }
-footer .footer__action-download::before {
-  content: "";
+
+.footer__action-download::before {
+  content: '';
   position: absolute;
   height: 500px;
   width: 500px;
@@ -59,7 +65,8 @@ footer .footer__action-download::before {
   transform: translateZ(-1px);
   pointer-events: none;
 }
-footer .footer__subtitle {
+
+.footer__subtitle {
   font-size: 26px;
   color: white;
   margin-top: 5px;
@@ -70,21 +77,26 @@ footer .footer__subtitle {
   grid-gap: 15px;
   position: relative;
 }
-footer .footer__subtitle img {
+
+.footer__subtitle img {
   display: block;
   width: 40px;
 }
-footer .footer__subtitle img:last-child {
+
+.footer__subtitle img:last-child {
   transform: scaleX(-1);
 }
-footer .footer__download {
+
+.footer__download {
   margin-top: 15px;
 }
-footer .footer__download img {
+
+.footer__download img {
   display: block;
   height: 35px;
 }
-footer .footer__social {
+
+.footer__social {
   list-style: none;
   display: flex;
   align-items: center;
@@ -93,11 +105,13 @@ footer .footer__social {
   position: relative;
   margin-top: 35px;
 }
-footer .footer__social-item a img {
+
+.footer__social-item a img {
   display: block;
   width: 30px;
 }
-footer .footer__menu {
+
+.footer__menu {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -107,16 +121,16 @@ footer .footer__menu {
   padding: 0 10px;
   margin: 20px 0;
 }
-footer .footer__menu-item a {
+
+.footer__menu-item a {
   line-height: 30px;
   font-size: 12px;
   color: rgba(0, 184, 235, 0.5);
-  padding: 0 10px;
+  padding: 0 10px
 }
-footer .footer__copy {
+
+.footer__copy {
   display: block;
   color: rgba(0, 184, 235, 0.5);
   font-size: 12px;
 }
-
-/*# sourceMappingURL=footer.css.map */

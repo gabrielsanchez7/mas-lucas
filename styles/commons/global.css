@@ -1,103 +1,352 @@
 * {
-	font-family: 'Barlow', sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	color: var(--gray-text);
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--gray-text);
 }
 
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
-	font: inherit;
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
 }
 
 b {
-	color: inherit;
+  color: inherit;
 }
 
 .container {
-	margin: auto;
-	max-width: 1300px;
-	width: 100%;
+  margin: auto;
+  max-width: 1300px;
+  width: 100%;
 }
 
 [data-condition],
 [hidden] {
-	display: none !important;
+  display: none !important;
 }
 
 button, input, textarea, select {
-	appearance: none;
-	border: none;
-	user-select: none;
-	background-color: transparent;
-	position: relative;
-	outline: none;
+  appearance: none;
+  border: none;
+  user-select: none;
+  background-color: transparent;
+  position: relative;
+  outline: none;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 button:active {
-	transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .shape {
-	position: relative;
+  position: relative;
 }
-
-.shape__box {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.shape .shape__box {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
-.shape__text {
-	position: relative;
-	z-index: 1;
-	color: inherit;
+.shape .shape__text {
+  position: relative;
+  z-index: 1;
+  color: inherit;
 }
 
 .modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 100;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 50px;
+}
+.modal .modal__close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--orange);
+}
+.modal .modal__close img {
+  width: 10px;
 }
 
-.modal-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	grid-gap: 50px;
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--blue);
+  border-bottom-right-radius: 90px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 100%;
+  height: calc(100% + 30px);
+  display: block;
+  background-color: var(--sky);
+  border-bottom-right-radius: 230px;
+  transform: skew(8deg) rotate(-12deg) translateY(10px);
+  z-index: 1;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 60%;
+  width: 100%;
+  height: calc(100% + 30px);
+  display: block;
+  background-color: var(--pink);
+  border-bottom-right-radius: 40px;
+  transform: skew(4deg) rotate(-8deg) translateY(50px);
+}
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 30px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+.banner .banner__hero {
+  color: white;
+  font-size: 65px;
+  font-weight: 300;
+  line-height: 75px;
+  padding-bottom: 70px;
+}
+.banner .banner__hero b,
+.banner .banner__hero button {
+  color: inherit;
+  font-size: inherit;
+}
+.banner .shape {
+  padding: 0 30px 20px 30px;
+  line-height: 85px;
+}
+.banner .banner__image {
+  display: block;
+  max-width: 60%;
+}
+.banner .banner__scroll {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 11px);
+  z-index: 4;
+  animation: banner-scroll-animation 1s infinite alternate-reverse;
+}
+.banner .banner__scroll-icon {
+  display: block;
+  width: 22px;
+}
+@keyframes banner-scroll-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+.banner .banner__indicator {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  z-index: 4;
+  user-select: none;
+}
+.banner .banner__dot {
+  padding: 8px 4px;
+}
+.banner .banner__dot--active .banner__dot-icon {
+  background-color: white;
+}
+.banner .banner__dot-icon {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
-.modal__close {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	border-radius: 50%;
-	background-color: var(--orange);
+.filter__handler {
+  position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.filter__handler:not(:last-child) {
+  margin-right: 8px;
+}
+.filter__handler::after, .filter__handler::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 400%;
+  height: 100%;
+  box-shadow: inset 0px 20px 15px 2px #fff;
+  top: 0;
+  left: -58px;
+  z-index: 1;
+}
+.filter__handler::after {
+  box-shadow: inset 0px -20px 15px 2px #fff;
+}
+.filter__handler .filter__handler-options {
+  border-radius: 5px;
+  position: absolute;
+  width: calc(100% - 6px);
+  left: 3px;
+  top: 7px;
+}
+.filter__handler.filter__handler--day .filter__handler-options, .filter__handler.filter__handler--product .filter__handler-options {
+  background-color: rgba(0, 173, 138, 0.5);
+}
+.filter__handler.filter__handler--month .filter__handler-options {
+  background-color: rgba(0, 184, 235, 0.5);
+}
+.filter__handler.filter__handler--year .filter__handler-options {
+  background-color: rgba(244, 108, 142, 0.5);
+}
+.filter__handler .filter__handler-options li {
+  list-style: none;
+  display: block;
+  line-height: 35px;
+  min-width: 35px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+.filter__handler .filter__handler-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.filter__handler.filter__handler--day .filter__handler-selected, .filter__handler.filter__handler--product .filter__handler-selected {
+  background-color: var(--green);
+  width: 40px;
+}
+.filter__handler.filter__handler--month .filter__handler-selected {
+  background-color: var(--sky);
+  width: 110px;
+}
+.filter__handler.filter__handler--year .filter__handler-selected {
+  background-color: var(--pink);
+  width: 65px;
+}
+.filter__handler .filter__handler-up, .filter__handler .filter__handler-down {
+  display: flex;
+  justify-content: center;
+  width: calc(100% + 6px);
+  left: -3px;
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+}
+.filter__handler .filter__handler-up {
+  top: calc(50% - 20px);
+  align-items: flex-start;
+  padding-top: 5px;
+}
+.filter__handler .filter__handler-down {
+  bottom: calc(50% - 20px);
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+.filter__handler .filter__handler-up img, .filter__handler .filter__handler-down img {
+  display: block;
+  width: 5px;
 }
 
-.modal__close img {
-	width: 10px;
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
 }
+.paginator .paginator__button {
+  display: block;
+  height: 40px;
+  width: 45px;
+  border-radius: 5px;
+  color: var(--blue);
+  border: 1px solid var(--sky);
+  font-size: 26px;
+  font-weight: 300;
+  padding-bottom: 3px;
+  text-align: center;
+}
+.paginator .paginator__button--next {
+  padding: unset;
+}
+.paginator .paginator__button--next img {
+  display: block;
+  width: 12px;
+  margin: auto;
+}
+.paginator .paginator__button--active {
+  background-color: var(--sky);
+  color: white;
+}
+
+.carousel {
+  margin: 100px auto;
+}
+.carousel .glide__slide img {
+  width: 100%;
+}
+.carousel .glide__bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+.carousel .glide__bullet {
+  height: 12px;
+  width: 12px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid var(--blue);
+  transition: 0.25s;
+}
+.carousel .glide__bullet--active {
+  background-color: var(--blue);
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -1,22 +1,18 @@
 #mis-lucas .banner::before {
   background-color: var(--green);
 }
-
 #mis-lucas .banner::after {
   background-color: var(--sky);
 }
-
 #mis-lucas .shape {
   font-size: 40px;
   padding: 0 30px 10px 30px;
   margin-top: 20px;
 }
-
-.lucas {
+#mis-lucas .lucas {
   padding: 100px 0;
 }
-
-.lucas__tabs {
+#mis-lucas .lucas__tabs {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +20,9 @@
   width: calc(100% - 30px);
   margin: 0 auto 50px auto;
 }
-
-.lucas__tabs::before,
-.lucas__tabs::after {
-  content: '';
+#mis-lucas .lucas__tabs::before,
+#mis-lucas .lucas__tabs::after {
+  content: "";
   position: absolute;
   display: block;
   width: 60px;
@@ -39,24 +34,21 @@
   background-size: contain;
   z-index: 1;
 }
-
-.lucas__tabs::after {
+#mis-lucas .lucas__tabs::after {
   left: unset;
   right: -40px;
   top: unset;
   bottom: -15px;
   transform: scale(-1);
 }
-
-.lucas__tab {
+#mis-lucas .lucas__tab {
   width: 100%;
   position: relative;
   padding: 30px 0;
   transform-style: preserve-3d;
 }
-
-.lucas__tab::after {
-  content: '';
+#mis-lucas .lucas__tab::after {
+  content: "";
   position: absolute;
   display: none;
   width: calc(100% + 20px);
@@ -64,176 +56,73 @@
   top: 8px;
   transform: translateZ(-1px);
 }
-
-.lucas__tab--active { z-index: 1; }
-.lucas__tab--active .lucas__tab-btn { background-color: unset !important; }
-.lucas__tab--active::after { display: block; }
-
-.lucas__tab--accumulated::after {
+#mis-lucas .lucas__tab--active {
+  z-index: 1;
+}
+#mis-lucas .lucas__tab--active .lucas__tab-btn {
+  background-color: unset !important;
+}
+#mis-lucas .lucas__tab--active::after {
+  display: block;
+}
+#mis-lucas .lucas__tab--accumulated::after {
   left: 0;
   background-image: url(/images/mis-lucas/shape-tab.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-.lucas__tab--redeemed::after {
+#mis-lucas .lucas__tab--redeemed::after {
   right: 0;
   background-image: url(/images/mis-lucas/shape-tab-2.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-.lucas__tab-btn {
+#mis-lucas .lucas__tab-btn {
   width: 100%;
   padding: 20px;
   font-size: 24px;
   color: white;
 }
-
-.lucas__tab-btn * { pointer-events: none; }
-
-.lucas__tab--accumulated .lucas__tab-btn {
+#mis-lucas .lucas__tab-btn * {
+  pointer-events: none;
+}
+#mis-lucas .lucas__tab--accumulated .lucas__tab-btn {
   background-color: var(--blue);
   border-radius: 20px 0 0 20px;
 }
-
-.lucas__tab--redeemed .lucas__tab-btn {
+#mis-lucas .lucas__tab--redeemed .lucas__tab-btn {
   background-color: var(--sky);
   border-radius: 0 20px 20px 0;
 }
-
-.lucas__tab-shape {
+#mis-lucas .lucas__tab-shape {
   position: absolute;
   max-width: calc(50% + 20px);
   left: -20px;
 }
-
-.lucas__filters {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+#mis-lucas .lucas__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   grid-gap: 10px;
 }
-
-.filter__period {
-	display: flex;
-	align-items: center;
+#mis-lucas .filter__period {
+  display: flex;
+  align-items: center;
 }
-
-.filter__period > span {
+#mis-lucas .filter__period > span {
   color: var(--green);
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
   margin-right: 15px;
 }
-
-.filter__handler {
-	position: relative;
-  padding: 40px 0;
-  overflow: hidden;
-}
-
-.filter__handler:not(:last-child) { margin-right: 8px; }
-
-.filter__handler::after,
-.filter__handler::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 400%;
-  height: 100%;
-  box-shadow: inset 0px 20px 15px 2px #fff;
-  top: 0;
-  left: -58px;
-  z-index: 1;
-}
-
-.filter__handler::after {
-  box-shadow: inset 0px -20px 15px 2px #fff;
-}
-
-.filter__handler-options {
-	border-radius: 5px;
-  position: absolute;
-  width: calc(100% - 6px);
-  left: 3px;
-  top: 7px;
-}
-
-.filter__handler--day .filter__handler-options { background-color: rgba(0, 173, 138, 0.5); }
-.filter__handler--month .filter__handler-options { background-color: rgba(0, 184, 235, 0.5); }
-.filter__handler--year .filter__handler-options { background-color: rgba(244, 108, 142, 0.5); }
-
-.filter__handler-options li {
-	list-style: none;
-	display: block;
-	line-height: 35px;
-	min-width: 35px;
-	text-align: center;
-	color: white;
-	font-weight: 500;
-}
-
-.filter__handler-selected {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 1px;
-  height: 40px;
-  color: white;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
-.filter__handler--day .filter__handler-selected {
-  background-color: var(--green);
-  width: 40px;
-}
-.filter__handler--month .filter__handler-selected {
-  background-color: var(--sky);
-  width: 110px;
-}
-.filter__handler--year .filter__handler-selected {
-  background-color: var(--pink);
-  width: 65px;
-}
-
-.filter__handler-up, .filter__handler-down {
-  display: flex;
-  justify-content: center;
-  width: calc(100% + 6px);
-  left: -3px;
-  height: 20px;
-  position: absolute;
-  z-index: 2;
-}
-
-.filter__handler-up {
-  top: calc(50% - 20px);
-  align-items: flex-start;
-  padding-top: 5px;
-}
-
-.filter__handler-down {
-  bottom: calc(50% - 20px);
-  align-items: flex-end;
-  padding-bottom: 5px;
-}
-
-.filter__handler-up img, .filter__handler-down img {
-  display: block;
-  width: 5px;
-}
-
-.filter__divider {
+#mis-lucas .filter__divider {
   display: block;
   height: 1px;
   width: 100%;
   background-color: var(--sky);
 }
-
-.filter__update {
+#mis-lucas .filter__update {
   border: 1px solid var(--sky);
   padding: 2px 8px;
   color: var(--blue);
@@ -242,8 +131,7 @@
   border-radius: 5px;
   min-width: max-content;
 }
-
-.lucas-table {
+#mis-lucas .lucas-table {
   border: 1px solid var(--blue);
   border-radius: 20px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
@@ -253,22 +141,27 @@
   margin-bottom: 150px;
   display: none;
 }
-
-.lucas-table--active { display: block; }
-
-.lucas-table table { width: 100%; }
-.lucas-table td {
+#mis-lucas .lucas-table--active {
+  display: block;
+}
+#mis-lucas .lucas-table table {
+  width: 100%;
+}
+#mis-lucas .lucas-table td {
   text-align: center;
   line-height: 32px;
   font-size: 20px;
 }
-
-.lucas-table td img { width: 24px; }
-
-.lucas-table--accumulated td { width: calc(100% / 3); }
-.lucas-table--redeemed td { width: calc(100% / 4); }
-
-.lucas-table__header {
+#mis-lucas .lucas-table td img {
+  width: 24px;
+}
+#mis-lucas .lucas-table--accumulated td {
+  width: 33.3333333333%;
+}
+#mis-lucas .lucas-table--redeemed td {
+  width: 25%;
+}
+#mis-lucas .lucas-table__header {
   padding: 0 30px;
   display: flex;
   align-items: center;
@@ -277,8 +170,7 @@
   width: calc(100% - 60px);
   top: -28px;
 }
-
-.lucas-table__header p {
+#mis-lucas .lucas-table__header p {
   font-size: 22px;
   font-weight: 700;
   color: white;
@@ -287,49 +179,22 @@
   text-align: center;
   padding: 15px 30px;
 }
-
-.lucas-table__header p:nth-child(1) { background-color: var(--blue); }
-.lucas-table__header p:nth-child(2) { background-color: var(--sky); }
-.lucas-table__header p:nth-child(3) { background-color: var(--orange); }
-.lucas-table__header p:nth-child(4) { background-color: var(--pink); }
-
-.lucas-options {
+#mis-lucas .lucas-table__header p:nth-child(1) {
+  background-color: var(--blue);
+}
+#mis-lucas .lucas-table__header p:nth-child(2) {
+  background-color: var(--sky);
+}
+#mis-lucas .lucas-table__header p:nth-child(3) {
+  background-color: var(--orange);
+}
+#mis-lucas .lucas-table__header p:nth-child(4) {
+  background-color: var(--pink);
+}
+#mis-lucas .lucas-options {
   position: relative;
 }
-
-.paginator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 10px;
-}
-
-.paginator__button {
-  display: block;
-  height: 40px;
-  width: 45px;
-  border-radius: 5px;
-  color: var(--blue);
-  border: 1px solid var(--sky);
-  font-size: 26px;
-  font-weight: 300;
-  padding-bottom: 3px;
-  text-align: center;
-}
-
-.paginator__button--next { padding: unset; }
-.paginator__button--next img {
-  display: block;
-  width: 12px;
-  margin: auto;
-}
-
-.paginator__button--active {
-  background-color: var(--sky);
-  color: white;
-}
-
-.lucas-download {
+#mis-lucas .lucas-download {
   display: flex;
   align-items: center;
   grid-gap: 20px;
@@ -343,6 +208,11 @@
   bottom: 0;
   right: 0;
 }
+#mis-lucas .lucas-download span {
+  color: inherit;
+}
+#mis-lucas .lucas-download img {
+  width: 40px;
+}
 
-.lucas-download span { color: inherit; }
-.lucas-download img { width: 40px; }
+/*# sourceMappingURL=mis-lucas.css.map */

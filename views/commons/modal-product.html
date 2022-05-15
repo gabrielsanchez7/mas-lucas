@@ -1,0 +1,83 @@
+<div id="modal-product" class="modal modal-product">
+  <div class="modal-container container">
+    <button class="modal__close"><img src="/images/common/icon-close.png"></button>
+    
+    <if data-condition="like">
+      <div class="modal-product__cut">
+        <div class="modal-product__price">
+          3670<br><small>lucas</small>
+        </div>
+      </div>
+      <div class="modal-product__image">
+        <img src="/images/products/product-6.png">
+      </div>
+      <div class="modal-product__detail">
+        <p class="modal-product__status">
+          <img src="/images/products/icon-heart-on.png">
+          El producto fue agregado a tus favoritos
+        </p>
+        <p class="modal-product__name">Batidora PHILIPS Pedestal</p>
+        <p class="modal-product__code">Cod. NSHG010477</p>
+        <div class="modal-product__options modal-product__options--like">
+          <button class="modal-product__option-1" type="button">Seguir canjeando</button>
+          <button class="modal-product__option-2" type="button">Ver favoritos</button>
+        </div>
+      </div>
+    </if>
+
+    <if data-condition="cart">
+      <div class="modal-product__cut">
+        <div class="modal-product__price">
+          3670<br><small>lucas</small>
+        </div>
+      </div>
+      <div class="modal-product__image">
+        <img src="/images/products/product-3.png">
+      </div>
+      <div class="modal-product__detail">
+        <p class="modal-product__status">
+          <img src="/images/products/icon-cart-added.png">
+          Se agreg&oacute; con &eacute;xito al carrito de compras
+        </p>
+        <p class="modal-product__name">Tostadora negra 750W Holstein</p>
+        <p class="modal-product__code">Cod. NSHG010477</p>
+        <div class="modal-product__options modal-product__options--cart">
+          <button class="modal-product__option-1" type="button">Seguir canjeando</button>
+          <button class="modal-product__option-2" type="button">Ir al carrito</button>
+        </div>
+      </div>
+    </if>
+
+    <if data-condition="detail">
+      <div class="modal-product__cut">
+        <div class="modal-product__price">
+          3670<br><small>lucas</small>
+        </div>
+      </div>
+      <div class="modal-product__image">
+        <img src="/images/products/product-4.png">
+      </div>
+      <div class="modal-product__detail">
+        <p class="modal-product__name">Cafetera con Filtro RCF-CM4277 Negro</p>
+        <p class="modal-product__code">Cod. NSHG010477</p>
+        <p class="modal-product__resume">Si no puedes comenzar el d&iacute;a sin una buena taza de caf&eacute;, entonces te invitamos a conocer esta cafetera el&eacute;ctrica. &iexcl;D&eacute;jate seducir por el sabor y aroma de un buen caf&eacute; cuando quieras!</p>
+        <div class="modal-product__options modal-product__options--detail">
+          <span>Cantidad</span>
+          <div class="filter__handler filter__handler--product">
+            <span class="filter__handler-selected">1</span>
+            <ul class="filter__handler-options">
+              <li>2</li>
+              <li class="filter__handler-option--selected">1</li>
+              <li>10</li>
+            </ul>
+  
+            <button class="filter__handler-up" type="button"><img src="/images/common/icon-handler-up.png"></button>
+            <button class="filter__handler-down" type="button"><img src="/images/common/icon-handler-down.png"></button>
+          </div>
+          <button class="modal-product__option-2" type="button"><img src="/images/products/icon-cart.png">Canjear</button>
+        </div>
+      </div>
+    </if>
+
+  </div>
+</div>

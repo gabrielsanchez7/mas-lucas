@@ -14,12 +14,25 @@ const logged = localStorage.getItem('login') != null
 // Carga todos los scripts
 const loadScripts = () => {
 
+	headerConditional()
 	loadUserMenu()
 	login()
 	chooseSubmenu()
 	toggleSubmenu()
 	chatbot()
 
+}
+
+const headerConditional = () => {
+	const header = document.querySelector('header')
+	const headerType = document.querySelector('[data-header]')?.getAttribute('data-header')
+	if(headerType != undefined) {
+		header.classList.add('header-2')
+	}
+
+	const condition = headerType == 2 ? 'header-2' : 'header-1'
+	const tag = document.querySelector(`[data-condition="${condition}"]`)
+	tag.outerHTML = tag.innerHTML
 }
 
 /** Muestra el menú dependiendo de la sesión */

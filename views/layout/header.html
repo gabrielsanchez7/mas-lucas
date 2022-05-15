@@ -1,6 +1,13 @@
 <header>
 	<div class="container header">
-		<a class="header__logo" href="/"><img src="/images/layout/logo.png" alt="+Lucas"></a>
+		<a class="header__logo" href="/">
+			<if data-condition="header-1">
+				<img src="/images/layout/logo.png" alt="+Lucas">
+			</if>
+			<if data-condition="header-2">
+				<img src="/images/layout/logo-2.png" alt="+Lucas">
+			</if>
+		</a>
 		<ul class="header__menu">
 			<li class="header__menu-item">
 				<a class="shape" href="/home">
@@ -26,7 +33,13 @@
 					<img class="header__user-icon" src="/images/layout/header-user.png" alt="User">
 				</if>
 				<if data-condition="logged">
-					<span class="header__user-action">Andr&eacute;s P.</span>
+					<div class="header__user-action">
+						<div class="header__cart">
+							<span class="header__cart-counter">2</span>
+							<img src="/images/layout/icon-header-cart.png">
+						</div>
+						Andr&eacute;s P.
+					</div>
 					<img class="header__user-icon" src="/images/layout/header-user.png" alt="User">
 					<ul class="submenu">
 						<li class="submenu__item submenu__item--name">

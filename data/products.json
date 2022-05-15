@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Licuadora Phillips",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Olla arrocera",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Tostadora",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Cafetera",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-4.png"
+  },
+  {
+    "id": 5,
+    "name": "Microondas",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-5.png"
+  },
+  {
+    "id": 6,
+    "name": "Batidora Phillips Pedestal",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-6.png"
+  },
+  {
+    "id": 7,
+    "name": "Licuadora Phillips",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-1.png"
+  },
+  {
+    "id": 8,
+    "name": "Olla arrocera",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-2.png"
+  },
+  {
+    "id": 9,
+    "name": "Tostadora",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-3.png"
+  },
+  {
+    "id": 10,
+    "name": "Cafetera",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-4.png"
+  },
+  {
+    "id": 11,
+    "name": "Microondas",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-5.png"
+  },
+  {
+    "id": 12,
+    "name": "Batidora Phillips Pedestal",
+    "code": "2345654",
+    "price": 3670,
+    "liked": false,
+    "image": "/images/products/product-6.png"
+  }
+]

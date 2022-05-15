@@ -39,3 +39,28 @@ export function allSiblings(element, selector = null) {
 
   return siblings
 }
+
+/** Abre un modal */
+export function openModal(selector, closeCallback = () => {}) {
+  const modal = document.querySelector(selector)
+  const modalContent = modal.querySelector('.modal-container')
+
+  modal.style.display = 'flex'
+  setTimeout(() => {
+    modal.style.opacity = '1'
+    setTimeout(() => {
+      modalContent.style.transform = 'translateY(0)'
+    }, 200)
+  }, 100)
+
+  const close = modal.querySelector('.modal__close')
+  close.addEventListener('click', () => {
+    modalContent.style.removeProperty('transform')
+    setTimeout(() => {
+      modal.style.removeProperty('opacity')
+      setTimeout(() => modal.style.removeProperty('display'), 200)
+    }, 100)
+
+    closeCallback()
+  })
+}

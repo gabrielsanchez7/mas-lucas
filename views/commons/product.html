@@ -1,0 +1,17 @@
+<div class="product">
+  <div class="product__price">{{price}}<br><small>lucas</small></div>
+  <div class="product__options">
+    <button class="product__option" data-action="like" type="button"><img src="/images/products/icon-heart-o.png" alt="Like"></button>
+    <button class="product__option" data-action="expand" type="button"><img src="/images/products/icon-eye.png" alt="Ver completo"></button>
+    <button class="product__option" data-action="detail" type="button"><img src="/images/products/icon-view.png" alt="Ver detalle"></button>
+  </div>
+  <div class="product__image">
+    <img src="{{image}}" alt="{{name}}">
+  </div>
+  <p class="product__name">{{name}}</p>
+  <p class="product__code">Cod. {{code}}</p>
+  <button type="button" class="product__action shape" data-action="cart">
+    <span class="shape__text"><img src="/images/products/icon-cart.png">Canjear</span>
+    <img class="shape__box" src="/images/products/shape-exchange.png">
+  </button>
+</div>

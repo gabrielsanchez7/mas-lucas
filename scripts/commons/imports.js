@@ -2,6 +2,10 @@ const include = (selector) => {
 
 	const tag = document.querySelector(`[data-include="${selector}"]`)
 
+	if(tag == null) {
+		return false
+	}
+
 	if (selector.startsWith('common-')) {
 		const path = selector.split('common-')[1]
 		fetch(`/views/commons/${path}.html`)
@@ -16,6 +20,8 @@ const include = (selector) => {
 				const pathname = location.pathname == "/" ? '/home' : location.pathname
 				const currentPage = headerTag.querySelector(`.header__menu-item a[href="${pathname}"] .shape__box`)
 				currentPage?.removeAttribute('hidden')
+
+				// createScriptTag({a: pathname})
 			})
 	} else {
 		const pathname = location.pathname.split('/')[1]
@@ -27,11 +33,16 @@ const include = (selector) => {
 				tag.innerHTML = text
 				const headerH = document.querySelector('header')?.clientHeight
 				const start = tag.querySelector('[data-start]')
-				start.style.paddingTop = `${headerH}px`
+				
+				if(start != null) {
+					start.style.paddingTop = `${headerH}px`
+				}
 
 				const currentPage = document.querySelector(`.submenu__item a[href="/${pathname}"]`)
 				const icon = currentPage?.previousElementSibling.querySelector('img')
 				icon?.removeAttribute('hidden')
+
+				createScriptTag(pathname)
 			})
 	}
 
@@ -54,4 +65,13 @@ const layoutInterval = setInterval(() => {
 const loadImports = () => {
 	include('common-modal-auth')
 	include('common-chat-bot')
+	include('common-modal-product')
+}
+
+const createScriptTag = (path) => {
+	path = path == '' ? 'home' : path
+	const scriptTag = document.createElement('script')
+	scriptTag.setAttribute('type', 'module')
+	scriptTag.setAttribute('src', `/scripts/pages/${path}.js`)
+	document.head.appendChild(scriptTag)
 }
