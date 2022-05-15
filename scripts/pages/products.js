@@ -21,7 +21,7 @@ const loadScripts = () => {
 /** Carrusel */
 const carousel = () => {
 	new Glide('.glide', {
-		autoplay: 6000,
+		autoplay: 4000,
 		type: 'carousel'
 	}).mount()
 }
