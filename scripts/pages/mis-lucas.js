@@ -5,7 +5,7 @@ const layoutInterval = setInterval(() => {
 	const header = document.querySelector('header')
 	const footer = document.querySelector('footer')
 	if (header != null && footer != null) {
-		setTimeout(() => loadScripts(), 100)
+		setTimeout(() => loadScripts(), 200)
 		clearInterval(layoutInterval)
 	}
 }, 10)

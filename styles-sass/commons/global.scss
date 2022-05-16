@@ -42,11 +42,12 @@ button, input, textarea, select {
 
 button {
 	cursor: pointer;
+
+	* { pointer-events: none; }
+	&:active { transform: translateY(1px); }
+
 }
 
-button:active {
-	transform: translateY(1px);
-}
 
 // Shapes
 .shape {

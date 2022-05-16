@@ -3,7 +3,7 @@ const layoutInterval = setInterval(() => {
 	const header = document.querySelector('header')
 	const footer = document.querySelector('footer')
 	if (header != null && footer != null) {
-		setTimeout(() => loadScripts(), 100)
+		setTimeout(() => loadScripts(), 200)
 		clearInterval(layoutInterval)
 	}
 }, 10)
@@ -210,7 +210,7 @@ const login = () => {
 	}
 
 	const btnLogin = document.querySelector('#btn-login')
-	btnLogin.addEventListener('click', () => {
+	btnLogin?.addEventListener('click', () => {
 		localStorage.setItem('login', 'true')
 		location.reload()
 	})
@@ -262,7 +262,6 @@ const toggleCheckbox = () => {
 	const checkboxes = document.querySelectorAll('.checkbox')
 	checkboxes.forEach(it => {
 		const input = it.querySelector('input[type="checkbox"]')
-		console.log({input})
 		input.addEventListener('change', e => {
 			const icon = it.querySelector('.checkbox__icon img')
 			if(e.target.checked) { icon.removeAttribute('hidden') }
@@ -274,7 +273,7 @@ const toggleCheckbox = () => {
 /** Chatbot */
 const chatbot = () => {
 	const caller = document.querySelector('.chat-bot__preview')
-	caller.addEventListener('click', () => {
+	caller?.addEventListener('click', () => {
 		const chat = document.querySelector('.chat-bot__chat')
 		const close = chat.querySelector('.chat__close')
 
