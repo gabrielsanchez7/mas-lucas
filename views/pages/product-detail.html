@@ -1,4 +1,4 @@
-<div data-header="2" id="product-detail" class="page">
+<div data-header="2" data-footer="2" id="product-detail" class="page">
 
   <div class="glide carousel container">
 		<div class="glide__track" data-glide-el="track">
@@ -24,15 +24,15 @@
 	<div class="info container">
 		<div class="preview">
 			<div class="preview__img">
-				<button class="preview__handler" type="button"><img src="/images/product-detail/arrow-left.png"></button>
+				<button class="preview__handler" type="button"><i class="icon-left"></i></button>
 				<img src="/images/product-detail/preview.png">
-				<button class="preview__handler" type="button"><img src="/images/product-detail/arrow-right.png"></button>
+				<button class="preview__handler" type="button"><i class="icon-right"></i></button>
 			</div>
 			<div class="preview__mini">
-				<div class="mini"></div>
-				<div class="mini"></div>
-				<div class="mini"></div>
-				<div class="mini"></div>
+				<div class="mini"><img src="/images/product-detail/mini-1.png"></div>
+				<div class="mini"><img src="/images/product-detail/mini-2.png"></div>
+				<div class="mini"><img src="/images/product-detail/mini-3.png"></div>
+				<div class="mini"><img src="/images/product-detail/mini-4.png"></div>
 			</div>
 		</div>
 		<div class="detail">
@@ -51,15 +51,15 @@
               <li>10</li>
             </ul>
   
-            <button class="filter__handler-up" type="button"><img src="/images/common/icon-handler-up.png"></button>
-            <button class="filter__handler-down" type="button"><img src="/images/common/icon-handler-down.png"></button>
+            <button class="filter__handler-up" type="button"><i class="icon-up"></i></button>
+          	<button class="filter__handler-down" type="button"><i class="icon-down"></i></button>
           </div>
-					<button class="detail__cart" type="button">
-						<img src="/images/products/icon-cart.png">
+					<a class="detail__cart" href="/cart">
+						<i class="icon-cart"></i>
 						Canjear
-					</button>
+					</a>
 					<button class="detail__like" type="button">
-						<img src="/images/products/icon-heart-o.png">
+						<i class="icon-heart-o"></i>
 					</button>
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 
 	<div class="tab tab-detail container">
 		<button type="button" class="tab__handler shape" data-info="detail">
-			<span class="shape__text">Detalle del producto <img src="/images/product-detail/arrow-down.png"></span>
+			<span class="shape__text">Detalle del producto <i class="icon-down"></i></span>
 			<img class="shape__box" src="/images/product-detail/shape-detail.png">
 		</button>
 		<div class="tab__content">
@@ -78,7 +78,7 @@
 
 	<div class="tab tab-detail container">
 		<button type="button" class="tab__handler shape" data-info="info">
-			<span class="shape__text">Informaci&oacute;n de env&iacute;o <img src="/images/product-detail/arrow-down.png"></span>
+			<span class="shape__text">Informaci&oacute;n de env&iacute;o <i class="icon-down"></i></span>
 			<img class="shape__box" src="/images/product-detail/shape-info.png">
 		</button>
 		<div class="tab__content">
@@ -88,12 +88,24 @@
 
 	<div class="tab tab-detail container">
 		<button type="button" class="tab__handler shape" data-info="tyc">
-			<span class="shape__text">T&eacute;rminos y condiciones <img src="/images/product-detail/arrow-down.png"></span>
+			<span class="shape__text">T&eacute;rminos y condiciones <i class="icon-down"></i></span>
 			<img class="shape__box" src="/images/product-detail/shape-tyc.png">
 		</button>
 		<div class="tab__content">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maxime nostrum pariatur. Ducimus iste ad, velit voluptatem id aperiam earum laborum rerum illo recusandae minus eligendi aspernatur quam quidem asperiores cumque. Omnis, quia totam qui, dolorum veritatis maxime error libero, aspernatur repellat iste voluptatem nesciunt harum corporis modi! Amet officiis a saepe maxime quas, error accusamus ad libero deserunt quibusdam magni. Corrupti sit veritatis nobis saepe deleniti at mollitia aliquam quas labore inventore qui ab sint iure laboriosam, quo vel dolore dolor reprehenderit autem maiores animi quos. Tempora odit, omnis nemo distinctio, fugit repellendus doloremque ipsum, quaerat atque temporibus alias!</p>
 		</div>
 	</div>
+
+	<div class="others container">
+		<div class="section-title container">
+			<h2 class="section-title__text">Te puede interesar</h2>
+			<span class="section-title__divider"></span>
+			<img class="section-title__img" src="/images/product-detail/deco-others.png">
+		</div>
+
+		<div class="other__products"></div>
+	</div>
+
+	<include data-include="common-modal-product"></include>
   
 </div>

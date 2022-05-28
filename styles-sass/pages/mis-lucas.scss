@@ -36,9 +36,10 @@
     height: 60px;
     top: -25px;
     left: -50px;
-    background-image: url(/images/mis-lucas/deco-tab.png);
+    background-image: url(/images/common/deco-leafs.png);
     background-repeat: no-repeat;
     background-size: contain;
+    transform: rotate(30deg) scale(1.4);
     z-index: 1;
   }
   
@@ -47,7 +48,7 @@
     right: -40px;
     top: unset;
     bottom: -15px;
-    transform: scale(-1);
+    transform: rotate(30deg) scale(-1.4);
   }
   
   .lucas__tab {
@@ -200,6 +201,10 @@
   .lucas-options {
     position: relative;
   }
+
+  .lucas-table i {
+    font-size: 24px;
+  }
   
   .lucas-download {
     display: flex;
@@ -217,6 +222,9 @@
   }
   
   .lucas-download span { color: inherit; }
-  .lucas-download img { width: 40px; }
+  .lucas-download i {
+    color: white;
+    font-size: 40px;
+  }
   
 }

@@ -1,21 +1,17 @@
 #mis-lucas .banner::before {
   background-color: var(--green);
 }
-
 #mis-lucas .banner::after {
   background-color: var(--sky);
 }
-
 #mis-lucas .shape {
   font-size: 40px;
   padding: 0 30px 10px 30px;
   margin-top: 20px;
 }
-
 #mis-lucas .lucas {
   padding: 100px 0;
 }
-
 #mis-lucas .lucas__tabs {
   display: flex;
   align-items: center;
@@ -24,7 +20,6 @@
   width: calc(100% - 30px);
   margin: 0 auto 50px auto;
 }
-
 #mis-lucas .lucas__tabs::before,
 #mis-lucas .lucas__tabs::after {
   content: "";
@@ -34,27 +29,25 @@
   height: 60px;
   top: -25px;
   left: -50px;
-  background-image: url(/images/mis-lucas/deco-tab.png);
+  background-image: url(/images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
+  transform: rotate(30deg) scale(1.4);
   z-index: 1;
 }
-
 #mis-lucas .lucas__tabs::after {
   left: unset;
   right: -40px;
   top: unset;
   bottom: -15px;
-  transform: scale(-1);
+  transform: rotate(30deg) scale(-1.4);
 }
-
 #mis-lucas .lucas__tab {
   width: 100%;
   position: relative;
   padding: 30px 0;
   transform-style: preserve-3d;
 }
-
 #mis-lucas .lucas__tab::after {
   content: "";
   position: absolute;
@@ -64,72 +57,59 @@
   top: 8px;
   transform: translateZ(-1px);
 }
-
 #mis-lucas .lucas__tab--active {
   z-index: 1;
 }
-
 #mis-lucas .lucas__tab--active .lucas__tab-btn {
   background-color: unset !important;
 }
-
 #mis-lucas .lucas__tab--active::after {
   display: block;
 }
-
 #mis-lucas .lucas__tab--accumulated::after {
   left: 0;
   background-image: url(/images/mis-lucas/shape-tab.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 #mis-lucas .lucas__tab--redeemed::after {
   right: 0;
   background-image: url(/images/mis-lucas/shape-tab-2.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 #mis-lucas .lucas__tab-btn {
   width: 100%;
   padding: 20px;
   font-size: 24px;
   color: white;
 }
-
 #mis-lucas .lucas__tab-btn * {
   pointer-events: none;
 }
-
 #mis-lucas .lucas__tab--accumulated .lucas__tab-btn {
   background-color: var(--blue);
   border-radius: 20px 0 0 20px;
 }
-
 #mis-lucas .lucas__tab--redeemed .lucas__tab-btn {
   background-color: var(--sky);
   border-radius: 0 20px 20px 0;
 }
-
 #mis-lucas .lucas__tab-shape {
   position: absolute;
   max-width: calc(50% + 20px);
   left: -20px;
 }
-
 #mis-lucas .lucas__filters {
   display: flex;
   align-items: center;
   justify-content: space-between;
   grid-gap: 10px;
 }
-
 #mis-lucas .filter__period {
   display: flex;
   align-items: center;
 }
-
 #mis-lucas .filter__period > span {
   color: var(--green);
   text-transform: uppercase;
@@ -137,14 +117,12 @@
   display: inline-block;
   margin-right: 15px;
 }
-
 #mis-lucas .filter__divider {
   display: block;
   height: 1px;
   width: 100%;
   background-color: var(--sky);
 }
-
 #mis-lucas .filter__update {
   border: 1px solid var(--sky);
   padding: 2px 8px;
@@ -154,7 +132,6 @@
   border-radius: 5px;
   min-width: max-content;
 }
-
 #mis-lucas .lucas-table {
   border: 1px solid var(--blue);
   border-radius: 20px;
@@ -165,33 +142,26 @@
   margin-bottom: 150px;
   display: none;
 }
-
 #mis-lucas .lucas-table--active {
   display: block;
 }
-
 #mis-lucas .lucas-table table {
   width: 100%;
 }
-
 #mis-lucas .lucas-table td {
   text-align: center;
   line-height: 32px;
   font-size: 20px;
 }
-
 #mis-lucas .lucas-table td img {
   width: 24px;
 }
-
 #mis-lucas .lucas-table--accumulated td {
   width: 33.3333333333%;
 }
-
 #mis-lucas .lucas-table--redeemed td {
   width: 25%;
 }
-
 #mis-lucas .lucas-table__header {
   padding: 0 30px;
   display: flex;
@@ -201,7 +171,6 @@
   width: calc(100% - 60px);
   top: -28px;
 }
-
 #mis-lucas .lucas-table__header p {
   font-size: 22px;
   font-weight: 700;
@@ -211,27 +180,24 @@
   text-align: center;
   padding: 15px 30px;
 }
-
 #mis-lucas .lucas-table__header p:nth-child(1) {
   background-color: var(--blue);
 }
-
 #mis-lucas .lucas-table__header p:nth-child(2) {
   background-color: var(--sky);
 }
-
 #mis-lucas .lucas-table__header p:nth-child(3) {
   background-color: var(--orange);
 }
-
 #mis-lucas .lucas-table__header p:nth-child(4) {
   background-color: var(--pink);
 }
-
 #mis-lucas .lucas-options {
   position: relative;
 }
-
+#mis-lucas .lucas-table i {
+  font-size: 24px;
+}
 #mis-lucas .lucas-download {
   display: flex;
   align-items: center;
@@ -246,13 +212,12 @@
   bottom: 0;
   right: 0;
 }
-
 #mis-lucas .lucas-download span {
   color: inherit;
 }
-
-#mis-lucas .lucas-download img {
-  width: 40px;
+#mis-lucas .lucas-download i {
+  color: white;
+  font-size: 40px;
 }
 
 /*# sourceMappingURL=mis-lucas.css.map */

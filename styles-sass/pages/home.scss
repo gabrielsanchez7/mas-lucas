@@ -36,10 +36,11 @@
 	
 	.welcome__title-deco {
 		width: 34px;
+		transform: scaleY(-1);
 	}
 	
 	.welcome__title-deco:last-child {
-		transform: scaleX(-1);
+		transform: scaleY(-1) scaleX(-1);
 	}
 	
 	.welcome .temp-video {
@@ -120,10 +121,11 @@
 		text-align: center;
 	}
 	
-	.welcome__step-label .shape__text img {
+	.welcome__step-label .shape__text i {
 		display: block;
 		margin: 5px auto 0 auto;
-		width: 10px;
+		color: white;
+		font-size: 12px;
 	}
 	
 	.step-section {

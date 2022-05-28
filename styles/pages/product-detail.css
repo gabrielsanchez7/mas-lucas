@@ -22,8 +22,9 @@
   justify-content: space-between;
   width: 100%;
 }
-#product-detail .preview .preview__img button img {
-  max-width: 15px;
+#product-detail .preview .preview__img button i {
+  font-size: 26px;
+  color: var(--sky);
 }
 #product-detail .preview .preview__img > img {
   max-width: 270px;
@@ -43,7 +44,7 @@
   width: 60px;
   top: 0;
   left: -60px;
-  background-image: url(/images/product-detail/deco-preview.png);
+  background-image: url(/images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
@@ -59,6 +60,7 @@
   height: 60px;
   border: 2px solid;
   border-radius: 8px;
+  overflow: hidden;
 }
 #product-detail .preview .preview__mini .mini:nth-child(3n) {
   border-color: var(--green);
@@ -68,6 +70,11 @@
 }
 #product-detail .preview .preview__mini .mini:nth-child(3n-2) {
   border-color: var(--sky);
+}
+#product-detail .preview .preview__mini .mini img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 #product-detail .detail {
   width: 50%;
@@ -137,13 +144,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 24px;
-  width: 24px;
+  height: 25px;
+  width: 25px;
   background-color: var(--sky);
   border-radius: 50%;
 }
-#product-detail .detail .detail__info .detail__like img {
-  width: 12px;
+#product-detail .detail .detail__info .detail__like i {
+  font-size: 12px;
+  color: white;
+  padding-top: 2px;
 }
 #product-detail .tab .tab__handler {
   color: white;
@@ -159,8 +168,9 @@
   justify-content: space-between;
   grid-gap: 7px;
 }
-#product-detail .tab .tab__handler .shape__text img {
-  width: 12px;
+#product-detail .tab .tab__handler .shape__text i {
+  font-size: 12px;
+  transition: 0.25s;
 }
 #product-detail .tab .tab__content {
   max-height: 0;
@@ -188,3 +198,113 @@
   border-width: 1px 1px 0 0;
   background-color: white;
 }
+#product-detail .others {
+  margin-top: 80px;
+}
+#product-detail .others .other__products {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  grid-gap: 20px;
+  padding: 60px 100px;
+}
+#product-detail .product {
+  width: calc(25% - 15px);
+  border-radius: 10px;
+  border: 1px solid var(--sky);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+#product-detail .product__price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--sky);
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 12px;
+  text-align: center;
+}
+#product-detail .product__price small {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: 600;
+}
+#product-detail .product__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  border-bottom: 1px solid var(--pink);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+#product-detail .product__image img {
+  max-width: 150px;
+  max-height: 150px;
+}
+#product-detail .product__name {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+#product-detail .product__code {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+#product-detail .product__action {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  margin: auto;
+  padding: 5px 15px 7px 15px;
+  display: block;
+  margin-top: 20px;
+}
+#product-detail .product__action * {
+  pointer-events: none;
+}
+#product-detail .product__action .shape__text {
+  display: flex;
+  align-items: center;
+}
+#product-detail .product__action .shape__text i {
+  font-size: 10px;
+  color: white;
+  display: inline-block;
+  margin-right: 5px;
+}
+#product-detail .product__options {
+  position: absolute;
+  right: 0;
+  top: 47px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 5px;
+  padding: 10px;
+}
+#product-detail .product__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 27px;
+  width: 27px;
+  background-color: #D2D2D2;
+  border-radius: 50%;
+}
+#product-detail .product__option i {
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=product-detail.css.map */

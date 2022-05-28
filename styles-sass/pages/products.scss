@@ -76,7 +76,10 @@
     width: 45px;
   }
   
-  .store__sort-icon img { width: 26px; }
+  .store__sort-icon i {
+    font-size: 20px;
+    color: white;
+  }
   
   .store__body {
     display: flex;
@@ -124,8 +127,9 @@
     color: inherit;
   }
   
-  .store__category img {
-    width: 20px;
+  .store__category .icon-arrow-right {
+    font-size: 15px;
+    color: var(--sky);
   }
   
   .store__range {
@@ -162,14 +166,14 @@
   
   .store__range-apply::before,
   .store__range-apply::after {
-    content: '';
+    content: '\e90e';
+    font-family: 'icomoon';
+    color: var(--green);
     display: block;
     height: 30px;
     width: 30px;
+    font-size: 30px;
     top: 0;
-    background-image: url(/images/products/icon-bird-green.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
   }
   
@@ -255,242 +259,8 @@
     grid-gap: 20px;
   }
   
-  .product {
-    width: calc(100% / 4 - 15px);
-    border-radius: 10px;
-    border: 1px solid var(--sky);
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .product__price {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--sky);
-    border-bottom-left-radius: 10px;
-    padding: 10px;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 12px;
-    text-align: center;
-  }
-  
-  .product__price small {
-    font-size: 10px;
-    text-transform: uppercase;
-    color: inherit;
-    font-weight: 600;
-  }
-  
-  .product__image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 200px;
-    margin: auto;
-    border-bottom: 1px solid var(--pink);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-  }
-  
-  .product__image img {
-    max-width: 150px;
-    max-height: 150px;
-  }
-  
-  .product__name {
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .product__code {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 5px;
-  }
-  
-  .product__action {
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: white;
-    margin: auto;
-    padding: 5px 15px 7px 15px;
-    display: block;
-    margin-top: 20px;
-  }
-  
-  .product__action * { pointer-events: none; }
-  
-  .product__action .shape__text {
-    display: flex;
-    align-items: center;
-  }
-  
-  .product__action .shape__text img {
-    width: 12px;
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
-  .product__options {
-    position: absolute;
-    right: 0;
-    top: 47px;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 5px;
-    padding: 10px;
-  }
-  
-  .product__option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 27px;
-    width: 27px;
-    background-color: #D2D2D2;
-    border-radius: 50%;
-  }
-  
-  .product__option img {
-    width: 15px;
-    pointer-events: none;
-  }
-  
   .store__content .paginator {
     margin-top: 60px;
   }
-  
-  .modal-product {
-    display: none;
-    opacity: 0;
-    transition: 0.3s;
-  }
-  
-  .modal-product .container {
-    background-image: url(/images/products/bg-modal-added-cart.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 354px;
-    max-width: 850px;
-    grid-gap: 30px;
-    padding: 20px 70px;
-    position: relative;
-    transform: translateY(100vh);
-    transition: 0.2s;
-  }
-  
-  .modal-product__image {
-    width: 35%;
-    padding: 30px;
-  }
-  
-  .modal-product__image img {
-    width: 100%;
-  }
-  
-  .modal-product__detail {
-    width: 65%;
-  }
-  
-  .modal-product__status {
-    color: var(--pink);
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    grid-gap: 5px;
-  }
-  
-  .modal-product__name {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--blue);
-  }
-  
-  .modal-product__code {
-    font-size: 24px;
-    color: var(--blue);
-  }
-  
-  .modal-product__options {
-    display: flex;
-    align-items: center;
-    grid-gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .modal-product__options--detail {
-    margin-top: 5px;
-  }
-  
-  .modal-product__options > button {
-    width: 160px;
-    border-radius: 7px;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 10px;
-    color: white;
-  }
-  
-  .modal-product__option-1 { background-color: var(--sky); }
-  .modal-product__option-2 { background-color: var(--orange); }
-  
-  .modal-product__cut {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(-6deg) translate(-2px, 45px) skewY(2.3deg);
-    border-top-left-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .modal-product__price {
-    position: absolute;
-    top: 40px;
-    left: -10px;
-    background-color: var(--sky);
-    border-bottom-right-radius: 10px;
-    padding: 25px 15px 15px 25px;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 12px;
-    text-align: center;
-    transform: rotate(6deg) translate(2px, -45px) skewY(-2.3deg);
-  }
-  
-  .modal-product__price small {
-    font-size: 10px;
-    text-transform: uppercase;
-    color: inherit;
-    font-weight: 600;
-  }
-  
-  .modal-product__options--detail > span {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--green);
-  }
-  
-  .modal-product__options--detail .modal-product__option-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 5px;
-    width: 120px;
-  }
-  
-  .modal-product__option-2 img { width: 15px; }
   
 }

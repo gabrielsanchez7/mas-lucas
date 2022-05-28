@@ -3,7 +3,6 @@
   position: relative;
   transform-style: preserve-3d;
 }
-
 #home .welcome::before, #home .welcome::after {
   content: "";
   position: absolute;
@@ -16,11 +15,9 @@
   background-size: contain;
   transform: translateZ(-1px);
 }
-
 #home .welcome::after {
   transform: translateZ(-1px) scaleX(-1);
 }
-
 #home .welcome__title, #home .welcome__subtitle {
   color: var(--blue);
   text-transform: uppercase;
@@ -31,21 +28,18 @@
   grid-gap: 10px;
   font-size: 34px;
 }
-
 #home .welcome__title-deco {
   width: 34px;
+  transform: scaleY(-1);
 }
-
 #home .welcome__title-deco:last-child {
-  transform: scaleX(-1);
+  transform: scaleY(-1) scaleX(-1);
 }
-
 #home .welcome .temp-video {
   width: 670px;
   display: block;
   margin: 40px auto 120px auto;
 }
-
 #home .welcome__steps {
   display: flex;
   align-items: center;
@@ -53,14 +47,12 @@
   grid-gap: 80px;
   margin-top: 100px;
 }
-
 #home .welcome__step {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 250px;
 }
-
 #home .welcome__step-icon {
   display: flex;
   align-items: flex-end;
@@ -68,13 +60,11 @@
   width: 60px;
   height: 60px;
 }
-
 #home .welcome__step-icon img {
   display: block;
   max-width: 100%;
   max-height: 100%;
 }
-
 #home .welcome__step-dot {
   display: block;
   height: 25px;
@@ -85,20 +75,16 @@
   position: relative;
   transform-style: preserve-3d;
 }
-
 #home .welcome__step:nth-child(1) .welcome__step-dot {
   background-color: var(--pink);
   z-index: 1;
 }
-
 #home .welcome__step:nth-child(2) .welcome__step-dot {
   background-color: var(--sky);
 }
-
 #home .welcome__step:nth-child(3) .welcome__step-dot {
   background-color: var(--green);
 }
-
 #home .welcome__step:nth-child(2) .welcome__step-dot::before {
   content: "";
   position: absolute;
@@ -110,7 +96,6 @@
   background-color: var(--blue);
   transform: translateZ(-1px);
 }
-
 #home .welcome__step-label {
   color: white;
   text-transform: uppercase;
@@ -123,13 +108,12 @@
   justify-content: center;
   text-align: center;
 }
-
-#home .welcome__step-label .shape__text img {
+#home .welcome__step-label .shape__text i {
   display: block;
   margin: 5px auto 0 auto;
-  width: 10px;
+  color: white;
+  font-size: 12px;
 }
-
 #home .step-section {
   display: flex;
   align-items: center;
@@ -137,18 +121,15 @@
   padding-left: 40px;
   padding-top: 50px;
 }
-
 #home .step-section--join {
   padding-top: 200px;
 }
-
 #home .step-section__info-title {
   font-size: 40px;
   color: var(--sky);
   margin-bottom: 15px;
   position: relative;
 }
-
 #home .step-section__info-title::before {
   content: "";
   position: absolute;
@@ -159,47 +140,38 @@
   width: 50px;
   background-size: contain;
 }
-
 #home .step-section--join .step-section__info-title::before {
   background-image: url(/images/home/deco-join.png);
 }
-
 #home .step-section--connect .step-section__info-title::before {
   background-image: url(/images/home/deco-connect.png);
 }
-
 #home .step-section--exchange .step-section__info-title::before {
   height: 45px;
   width: 45px;
   background-image: url(/images/home/deco-exchange.png);
 }
-
 #home .step-section--connect {
   flex-flow: row-reverse;
 }
-
 #home .step-section__info {
   width: 100%;
   padding: 0 70px 0 100px;
 }
-
 #home .step-section--connect .step-section__info {
   padding-right: unset;
   padding-left: 70px;
 }
-
 #home .step-section__info-subtitle {
   font-size: 20px;
   max-width: 420px;
   margin-bottom: 20px;
 }
-
 #home .step-section__info-download img {
   display: block;
   height: 42px;
   margin-top: 10px;
 }
-
 #home .step-section__image {
   max-width: 50%;
   width: 100%;
@@ -207,7 +179,6 @@
   transform-style: preserve-3d;
   text-align: end;
 }
-
 #home .step-section__image::before {
   content: "";
   position: absolute;
@@ -219,7 +190,6 @@
   background-color: var(--pink);
   clip-path: polygon(0 33.5%, 160% 0, 110% 100%, 0 99.67%);
 }
-
 #home .step-section--connect .step-section__image::before {
   left: unset;
   right: 98%;
@@ -228,11 +198,9 @@
   background-color: var(--sky);
   clip-path: polygon(0 5%, 100% 6.4%, 100% 66.03%, -88% 100%);
 }
-
 #home .step-section--exchange .step-section__image::before {
   background-color: var(--green);
 }
-
 #home .step-section__image img {
   width: 100%;
 }

@@ -1,0 +1,104 @@
+#support .banner::before {
+  background-color: var(--blue-text);
+}
+#support .banner::after {
+  background-color: var(--sky);
+}
+#support .banner__hero {
+  color: var(--sky);
+  font-weight: 700;
+}
+#support .banner__subtitle {
+  display: block;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+#support .banner__image {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+#support .banner__image img {
+  width: 100%;
+}
+#support .divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 80px auto;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#support .divider::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+  left: 0;
+  top: 50%;
+  transform: translateZ(-1px);
+}
+#support .divider .divider__center {
+  width: 105px;
+  padding: 3px 10px 0 10px;
+  background-color: white;
+}
+#support .divider .divider__side {
+  width: 110px;
+  background-color: white;
+  padding-left: 10px;
+}
+#support .divider .divider__side:first-child {
+  transform: scaleX(-1);
+}
+#support .support-options {
+  display: flex;
+  justify-content: center;
+  grid-gap: 50px;
+  padding-bottom: 60px;
+}
+#support .support-options .support__opt {
+  width: calc(33.3333333333% - 33.3333333333px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+#support .support-options .support__opt:nth-child(1) {
+  background-color: var(--blue);
+}
+#support .support-options .support__opt:nth-child(2) {
+  background-color: var(--sky);
+}
+#support .support-options .support__opt:nth-child(2) .support__opt-key {
+  margin-top: 15px;
+  font-size: 26px;
+}
+#support .support-options .support__opt:nth-child(3) {
+  background-color: var(--green);
+}
+#support .support-options .support__opt .support__opt-img {
+  width: 180px;
+  margin-bottom: 25px;
+}
+#support .support-options .support__opt .support__opt-key {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 22px;
+}
+#support .support-options .support__opt .support__opt-value {
+  color: white;
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=support.css.map */

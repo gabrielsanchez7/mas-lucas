@@ -126,8 +126,9 @@ header {
 		right: -8px;
 	}
 	
-	.header__cart img {
+	.header__cart i {
 		width: 18px;
+		color: var(--sky);
 	}
 	
 	.header__user-icon {
@@ -180,6 +181,10 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		i {
+			width: 100%;
+			font-size: 26px;
+		}
 	}
 	
 	.header .submenu__item--active {
@@ -233,7 +238,6 @@ header {
 	.header .submenu__item--logout i {
 		color: inherit;
 		margin: 5px;
-		padding-top: 5px;
 	}
 	
 }

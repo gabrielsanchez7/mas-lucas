@@ -53,8 +53,8 @@ export function openModal(selector, closeCallback = () => {}) {
     }, 200)
   }, 100)
 
-  const close = modal.querySelector('.modal__close')
-  close.addEventListener('click', () => {
+  const close = modal.querySelector('.modal__close, .modal__cancel')
+  close?.addEventListener('click', () => {
     modalContent.style.removeProperty('transform')
     setTimeout(() => {
       modal.style.removeProperty('opacity')
@@ -62,5 +62,48 @@ export function openModal(selector, closeCallback = () => {}) {
     }, 100)
 
     closeCallback()
+  })
+}
+
+/** Carga los productos y reemplaza la información */
+export async function loadProduct(container, limit) {
+  const data = await fetch('/data/products.json').then(res => res.json())
+  limit = limit == null ? data.length : limit
+  data.forEach(async (it, key) => {
+    if(key < limit) {
+      let template = await fetch('/views/commons/product.html').then(res => res.text())
+      template = template.replace(/{{price}}/, it.price)
+      template = template.replace(/{{image}}/, it.image)
+      template = template.replace(/{{name}}/g, it.name)
+      template = template.replace(/{{code}}/, it.code)
+
+      container.innerHTML += template
+
+      if(key == limit - 1) {
+        const options = document.querySelectorAll('.product__option, .product__action')
+        options.forEach(opt => {
+          opt.addEventListener('click', e => {
+            const t = e.target
+            const action = t.getAttribute('data-action')
+
+            if(action == 'expand') {
+              location.href = '/product-detail'
+            } else {
+              const conditionContainer = document.querySelector(`.modal-product .modal-container`)
+              const def = conditionContainer.innerHTML
+              const conditionTag = conditionContainer.querySelector(`[data-condition="${action}"]`)
+              if(conditionTag != null) {
+                conditionTag.outerHTML = conditionTag.innerHTML
+              }
+        
+              openModal('#modal-product', () => {
+                conditionContainer.innerHTML = def
+              })
+            }
+
+          })
+        })
+      }
+    }
   })
 }

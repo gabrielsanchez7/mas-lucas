@@ -73,9 +73,9 @@
     border-radius: 50%;
   }
   
-  .chat__close img {
+  .chat__close i {
     display: block;
-    width: 8px;
+    color: white;
   }
   
   .chat__header-img {
@@ -213,9 +213,8 @@
     padding: 8px 10px;
   }
   
-  .chat__type-send img {
-    display: block;
-    width: 18px;
+  .chat__type-send i {
+    font-size: 18px;
   }
   
   .chat__type textarea {

@@ -1,36 +1,72 @@
 <footer>
-  <div class="footer container">
-    <p class="footer__title">Qu&eacute; esperas para ganar esa platita extra</p>
-    <button class="footer__action-download shape">
-      <img src="/images/layout/shape-footer-download.png" class="shape__box">
-      <span class="shape__text">Descarga el app</span>
-    </button>
-    <p class="footer__subtitle">
-      <img src="/images/layout/footer-deco-subtitle.png">
-      y comienza hoy
-      <img src="/images/layout/footer-deco-subtitle.png">
-    </p>
-    <button class="footer__download" type="button">
-      <img src="/images/common/play-store.png" alt="Descarga">
-    </button>
-    <ul class="footer__social">
-      <li class="footer__social-item">
-        <a href="javascript:void(0)"><img src="/images/common/icon-facebook.png" alt="Facebook"></a>
-      </li>
-      <li class="footer__social-item">
-        <a href="javascript:void(0)"><img src="/images/common/icon-instagram.png" alt="Instagram"></a>
-      </li>
-      <li class="footer__social-item">
-        <a href="javascript:void(0)"><img src="/images/common/icon-youtube.png" alt="Youtube"></a>
-      </li>
-    </ul>
-    <ul class="footer__menu">
-      <li class="footer__menu-item"><a href="/">Inicio</a></li>
-      <li class="footer__menu-item"><a href="/products">Productos</a></li>
-      <li class="footer__menu-item"><a href="/support">Soporte</a></li>
-    </ul>
-    <small class="footer__copy">Copyright &copy; Empresa Nacional de Telecomunicaciones S.A. Todos los derechos reservados.</small>
-  </div>
+  <if data-condition="footer-1">
+    <div class="footer-1 container">
+      <p class="footer__title">Qu&eacute; esperas para ganar esa platita extra</p>
+      <button class="footer__action-download shape">
+        <img src="/images/layout/shape-footer-download.png" class="shape__box">
+        <span class="shape__text">Descarga el app</span>
+      </button>
+      <p class="footer__subtitle">
+        <img src="/images/layout/footer-deco-subtitle.png">
+        y comienza hoy
+        <img src="/images/layout/footer-deco-subtitle.png">
+      </p>
+      <button class="footer__download" type="button">
+        <img src="/images/common/play-store.png" alt="Descarga">
+      </button>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a href="javascript:void(0)"><i class="icon-facebook"></i></a>
+        </li>
+        <li class="footer__social-item">
+          <a href="javascript:void(0)"><i class="icon-instagram"></i></a>
+        </li>
+        <li class="footer__social-item">
+          <a href="javascript:void(0)"><i class="icon-youtube"></i></a>
+        </li>
+      </ul>
+      <ul class="footer__menu">
+        <li class="footer__menu-item"><a href="/">Inicio</a></li>
+        <li class="footer__menu-item"><a href="/products">Productos</a></li>
+        <li class="footer__menu-item"><a href="/support">Soporte</a></li>
+      </ul>
+
+      <small class="container footer__copy">Copyright &copy; Empresa Nacional de Telecomunicaciones S.A. Todos los derechos reservados.</small>
+    </div>
+  </if>
+
+  <if data-condition="footer-2">
+    <div class="footer-2 container">
+      <div>
+        <a class="footer-2__logo" href="/"><img src="/images/layout/logo-2.png"></a>
+        <div class="footer-2__social">
+          <ul class="footer-2__net">
+            <li><a href="javascript:void(0)"><i class="icon-facebook"></i></a></li>
+            <li><a href="javascript:void(0)"><i class="icon-instagram"></i></a></li>
+            <li><a href="javascript:void(0)"><i class="icon-youtube"></i></a></li>
+          </ul>
+          <a class="footer-2__download" href="javascript:void(0)"><img src="/images/common/google-play.png"></a>
+        </div>
+        <ul class="footer-2__menu">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/products">Productos</a></li>
+          <li><a href="/support">Soporte</a></li>
+          <li><a href="/mis-lucas">Mis Lucas</a></li>
+          <li><a href="/learning">Capacitaciones</a></li>
+        </ul>
+        <ul class="footer-2__submenu">
+          <li><a href="/cashout">Cashout</a></li>
+          <li><a href="/news">Novedades</a></li>
+          <li><a href="/commercial-offer">Oferta comercial</a></li>
+          <li><a href="/scheme">Esquema</a></li>
+        </ul>
+      </div>
+      
+      <small class="container footer__copy">Copyright &copy; Empresa Nacional de Telecomunicaciones S.A. Todos los derechos reservados.</small>
+    </div>
+
+  </if>
 
   <include data-include="common-chat-bot"></include>
+
 </footer>

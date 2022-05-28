@@ -1,0 +1,92 @@
+<div id="cashout" data-header="2" data-footer="2">
+  
+  <div class="section-title container">
+    <h2 class="section-title__text">
+      &iexcl;Hola! Andr&eacute;s tienes
+      <span class="shape">
+        <span class="shape__text">5000 lucas</span>
+        <img class="shape__box" src="/images/cashout/shape-title.png">
+      </span>
+      &iquest;C&oacute;mo lo vas a canjear hoy?
+    </h2>
+    <span class="section-title__divider"></span>
+    <img class="section-title__img" src="/images/product-detail/deco-others.png">
+  </div>
+  
+  <div class="options container">
+
+    <div class="option">
+      <p class="option__title">Canj&eacute;alo por estos productos</p>
+      <div class="option__products glide glide--custom carousel">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <p class="option-product__price">3670 <span>Lucas</span></p>
+              <div class="option-product__img">
+                <img src="/images/cashout/product-1.png">
+              </div>
+              <button class="option-product__action shape" type="button">
+                <span class="shape__text">Canjear</span>
+                <img class="shape__box" src="/images/cashout/shape-exchange.png">
+              </button>
+            </li>
+            <li class="glide__slide">
+              <p class="option-product__price">3670 <span>Lucas</span></p>
+              <div class="option-product__img">
+                <img src="/images/cashout/product-2.png">
+              </div>
+              <button class="option-product__action shape" type="button">
+                <span class="shape__text">Canjear</span>
+                <img class="shape__box" src="/images/cashout/shape-exchange.png">
+              </button>
+            </li>
+            <li class="glide__slide">
+              <p class="option-product__price">3670 <span>Lucas</span></p>
+              <div class="option-product__img">
+                <img src="/images/cashout/product-3.png">
+              </div>
+              <button class="option-product__action shape" type="button">
+                <span class="shape__text">Canjear</span>
+                <img class="shape__box" src="/images/cashout/shape-exchange.png">
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="icon-left"></i></button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="icon-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="option">
+      <p class="option__title">Ret&iacute;ralo en efectivo</p>
+      <div class="option__cash">
+        <p>Ingresa la cantidad de lucas que deseas retirar</p>
+        <div class="cash__values">
+          <label class="cash__values-lucas">
+            <img src="/images/common/plus.png">
+            <input type="text" value="890">
+          </label>
+          <span class="cash__values-equal"> = </span>
+          <label class="cash__values-money">
+            <span>S/</span>
+            <span>890</span>
+          </label>
+        </div>
+      </div>
+      <div class="exchange">
+        <i class="icon-bird"></i>
+        <button type="button" class="shape">
+          <span class="shape__text">Retirar</span>
+          <img class="shape__box" src="/images/cashout/shape-title.png">
+        </button>
+        <i class="icon-bird"></i>
+      </div>
+    </div>
+    
+  </div>
+
+  <include data-include="common-modal-confirm-lucas"></include>
+  
+</div>

@@ -15,6 +15,7 @@ const logged = localStorage.getItem('login') != null
 const loadScripts = () => {
 
 	headerConditional()
+	footerConditional()
 	loadUserMenu()
 	login()
 	chooseSubmenu()
@@ -23,6 +24,7 @@ const loadScripts = () => {
 
 }
 
+/** Muestra el header dependiendo de la ubicación */
 const headerConditional = () => {
 	const header = document.querySelector('header')
 	const headerType = document.querySelector('[data-header]')?.getAttribute('data-header')
@@ -31,6 +33,14 @@ const headerConditional = () => {
 	}
 
 	const condition = headerType == 2 ? 'header-2' : 'header-1'
+	const tag = document.querySelector(`[data-condition="${condition}"]`)
+	tag.outerHTML = tag.innerHTML
+}
+
+/** Muestra el footer dependiendo de la ubicación */
+const footerConditional = () => {
+	const footerType = document.querySelector('[data-footer]')?.getAttribute('data-footer')
+	const condition = footerType == 2 ? 'footer-2' : 'footer-1'
 	const tag = document.querySelector(`[data-condition="${condition}"]`)
 	tag.outerHTML = tag.innerHTML
 }

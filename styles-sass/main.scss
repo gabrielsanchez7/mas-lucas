@@ -1,10 +1,12 @@
 /* Commons */
+@import './commons/icomoon.css';
 @import './commons/glide.core.min.css';
 @import './commons/nouislider.min.css';
 @import './commons/vars.css';
 @import './commons/global.css';
 @import './commons/auth.css';
 @import './commons/chat-bot.css';
+@import './commons/modals.scss';
 
 /* Layout */
 @import './layout/header.css';
@@ -15,3 +17,8 @@
 @import './pages/mis-lucas.css';
 @import './pages/products.css';
 @import './pages/product-detail.scss';
+@import './pages/exchange.scss';
+@import './pages/support.scss';
+@import './pages/learning.scss';
+@import './pages/cashout.scss';
+@import './pages/news.scss';

@@ -1,0 +1,500 @@
+#cart .carousel, #exchange .carousel, #confirm .carousel {
+  margin: 100px auto 40px auto;
+}
+#cart .cart-table, #cart .exchange-table, #cart .resume-table, #exchange .cart-table, #exchange .exchange-table, #exchange .resume-table, #confirm .cart-table, #confirm .exchange-table, #confirm .resume-table {
+  width: 100%;
+  margin-top: 50px;
+  border: 2px solid var(--sky);
+  border-radius: 10px;
+  position: relative;
+}
+#cart .cart-table .cart-shape, #cart .cart-table .exchange-shape, #cart .exchange-table .cart-shape, #cart .exchange-table .exchange-shape, #cart .resume-table .cart-shape, #cart .resume-table .exchange-shape, #exchange .cart-table .cart-shape, #exchange .cart-table .exchange-shape, #exchange .exchange-table .cart-shape, #exchange .exchange-table .exchange-shape, #exchange .resume-table .cart-shape, #exchange .resume-table .exchange-shape, #confirm .cart-table .cart-shape, #confirm .cart-table .exchange-shape, #confirm .exchange-table .cart-shape, #confirm .exchange-table .exchange-shape, #confirm .resume-table .cart-shape, #confirm .resume-table .exchange-shape {
+  position: absolute;
+  display: block;
+  width: 55%;
+  top: -10px;
+  left: -12px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cart .cart-table .cart-shape .shape__text, #cart .cart-table .exchange-shape .shape__text, #cart .exchange-table .cart-shape .shape__text, #cart .exchange-table .exchange-shape .shape__text, #cart .resume-table .cart-shape .shape__text, #cart .resume-table .exchange-shape .shape__text, #exchange .cart-table .cart-shape .shape__text, #exchange .cart-table .exchange-shape .shape__text, #exchange .exchange-table .cart-shape .shape__text, #exchange .exchange-table .exchange-shape .shape__text, #exchange .resume-table .cart-shape .shape__text, #exchange .resume-table .exchange-shape .shape__text, #confirm .cart-table .cart-shape .shape__text, #confirm .cart-table .exchange-shape .shape__text, #confirm .exchange-table .cart-shape .shape__text, #confirm .exchange-table .exchange-shape .shape__text, #confirm .resume-table .cart-shape .shape__text, #confirm .resume-table .exchange-shape .shape__text {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#cart .cart-table .table-head > li:nth-child(1), #cart .cart-table .table-row > li:nth-child(1), #cart .exchange-table .table-head > li:nth-child(1), #cart .exchange-table .table-row > li:nth-child(1), #cart .resume-table .table-head > li:nth-child(1), #cart .resume-table .table-row > li:nth-child(1), #exchange .cart-table .table-head > li:nth-child(1), #exchange .cart-table .table-row > li:nth-child(1), #exchange .exchange-table .table-head > li:nth-child(1), #exchange .exchange-table .table-row > li:nth-child(1), #exchange .resume-table .table-head > li:nth-child(1), #exchange .resume-table .table-row > li:nth-child(1), #confirm .cart-table .table-head > li:nth-child(1), #confirm .cart-table .table-row > li:nth-child(1), #confirm .exchange-table .table-head > li:nth-child(1), #confirm .exchange-table .table-row > li:nth-child(1), #confirm .resume-table .table-head > li:nth-child(1), #confirm .resume-table .table-row > li:nth-child(1) {
+  min-width: 55%;
+}
+#cart .cart-table .table-head > li:nth-child(2), #cart .cart-table .table-row > li:nth-child(2), #cart .exchange-table .table-head > li:nth-child(2), #cart .exchange-table .table-row > li:nth-child(2), #cart .resume-table .table-head > li:nth-child(2), #cart .resume-table .table-row > li:nth-child(2), #exchange .cart-table .table-head > li:nth-child(2), #exchange .cart-table .table-row > li:nth-child(2), #exchange .exchange-table .table-head > li:nth-child(2), #exchange .exchange-table .table-row > li:nth-child(2), #exchange .resume-table .table-head > li:nth-child(2), #exchange .resume-table .table-row > li:nth-child(2), #confirm .cart-table .table-head > li:nth-child(2), #confirm .cart-table .table-row > li:nth-child(2), #confirm .exchange-table .table-head > li:nth-child(2), #confirm .exchange-table .table-row > li:nth-child(2), #confirm .resume-table .table-head > li:nth-child(2), #confirm .resume-table .table-row > li:nth-child(2) {
+  min-width: 15%;
+}
+#cart .cart-table .table-head > li:nth-child(3), #cart .cart-table .table-row > li:nth-child(3), #cart .exchange-table .table-head > li:nth-child(3), #cart .exchange-table .table-row > li:nth-child(3), #cart .resume-table .table-head > li:nth-child(3), #cart .resume-table .table-row > li:nth-child(3), #exchange .cart-table .table-head > li:nth-child(3), #exchange .cart-table .table-row > li:nth-child(3), #exchange .exchange-table .table-head > li:nth-child(3), #exchange .exchange-table .table-row > li:nth-child(3), #exchange .resume-table .table-head > li:nth-child(3), #exchange .resume-table .table-row > li:nth-child(3), #confirm .cart-table .table-head > li:nth-child(3), #confirm .cart-table .table-row > li:nth-child(3), #confirm .exchange-table .table-head > li:nth-child(3), #confirm .exchange-table .table-row > li:nth-child(3), #confirm .resume-table .table-head > li:nth-child(3), #confirm .resume-table .table-row > li:nth-child(3) {
+  min-width: 15%;
+}
+#cart .cart-table .table-head > li:nth-child(4), #cart .cart-table .table-row > li:nth-child(4), #cart .exchange-table .table-head > li:nth-child(4), #cart .exchange-table .table-row > li:nth-child(4), #cart .resume-table .table-head > li:nth-child(4), #cart .resume-table .table-row > li:nth-child(4), #exchange .cart-table .table-head > li:nth-child(4), #exchange .cart-table .table-row > li:nth-child(4), #exchange .exchange-table .table-head > li:nth-child(4), #exchange .exchange-table .table-row > li:nth-child(4), #exchange .resume-table .table-head > li:nth-child(4), #exchange .resume-table .table-row > li:nth-child(4), #confirm .cart-table .table-head > li:nth-child(4), #confirm .cart-table .table-row > li:nth-child(4), #confirm .exchange-table .table-head > li:nth-child(4), #confirm .exchange-table .table-row > li:nth-child(4), #confirm .resume-table .table-head > li:nth-child(4), #confirm .resume-table .table-row > li:nth-child(4) {
+  min-width: 15%;
+}
+#cart .cart-table .table-head, #cart .exchange-table .table-head, #cart .resume-table .table-head, #exchange .cart-table .table-head, #exchange .exchange-table .table-head, #exchange .resume-table .table-head, #confirm .cart-table .table-head, #confirm .exchange-table .table-head, #confirm .resume-table .table-head {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#cart .cart-table .table-head > li, #cart .exchange-table .table-head > li, #cart .resume-table .table-head > li, #exchange .cart-table .table-head > li, #exchange .exchange-table .table-head > li, #exchange .resume-table .table-head > li, #confirm .cart-table .table-head > li, #confirm .exchange-table .table-head > li, #confirm .resume-table .table-head > li {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 30px;
+  text-align: center;
+  background-color: var(--sky);
+}
+#cart .cart-table .table-head > li:first-child, #cart .exchange-table .table-head > li:first-child, #cart .resume-table .table-head > li:first-child, #exchange .cart-table .table-head > li:first-child, #exchange .exchange-table .table-head > li:first-child, #exchange .resume-table .table-head > li:first-child, #confirm .cart-table .table-head > li:first-child, #confirm .exchange-table .table-head > li:first-child, #confirm .resume-table .table-head > li:first-child {
+  border-top-left-radius: 6px;
+}
+#cart .cart-table .table-head > li:last-child, #cart .exchange-table .table-head > li:last-child, #cart .resume-table .table-head > li:last-child, #exchange .cart-table .table-head > li:last-child, #exchange .exchange-table .table-head > li:last-child, #exchange .resume-table .table-head > li:last-child, #confirm .cart-table .table-head > li:last-child, #confirm .exchange-table .table-head > li:last-child, #confirm .resume-table .table-head > li:last-child {
+  border-top-right-radius: 6px;
+}
+#cart .cart-table .table-row, #cart .exchange-table .table-row, #cart .resume-table .table-row, #exchange .cart-table .table-row, #exchange .exchange-table .table-row, #exchange .resume-table .table-row, #confirm .cart-table .table-row, #confirm .exchange-table .table-row, #confirm .resume-table .table-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+}
+#cart .cart-table .table-row:nth-child(4n) .shape__box, #cart .exchange-table .table-row:nth-child(4n) .shape__box, #cart .resume-table .table-row:nth-child(4n) .shape__box, #exchange .cart-table .table-row:nth-child(4n) .shape__box, #exchange .exchange-table .table-row:nth-child(4n) .shape__box, #exchange .resume-table .table-row:nth-child(4n) .shape__box, #confirm .cart-table .table-row:nth-child(4n) .shape__box, #confirm .exchange-table .table-row:nth-child(4n) .shape__box, #confirm .resume-table .table-row:nth-child(4n) .shape__box {
+  color: var(--sky);
+}
+#cart .cart-table .table-row:nth-child(4n) .filter__handler-selected, #cart .exchange-table .table-row:nth-child(4n) .filter__handler-selected, #cart .resume-table .table-row:nth-child(4n) .filter__handler-selected, #exchange .cart-table .table-row:nth-child(4n) .filter__handler-selected, #exchange .exchange-table .table-row:nth-child(4n) .filter__handler-selected, #exchange .resume-table .table-row:nth-child(4n) .filter__handler-selected, #confirm .cart-table .table-row:nth-child(4n) .filter__handler-selected, #confirm .exchange-table .table-row:nth-child(4n) .filter__handler-selected, #confirm .resume-table .table-row:nth-child(4n) .filter__handler-selected {
+  background-color: var(--sky);
+}
+#cart .cart-table .table-row:nth-child(4n) .filter__handler-options, #cart .exchange-table .table-row:nth-child(4n) .filter__handler-options, #cart .resume-table .table-row:nth-child(4n) .filter__handler-options, #exchange .cart-table .table-row:nth-child(4n) .filter__handler-options, #exchange .exchange-table .table-row:nth-child(4n) .filter__handler-options, #exchange .resume-table .table-row:nth-child(4n) .filter__handler-options, #confirm .cart-table .table-row:nth-child(4n) .filter__handler-options, #confirm .exchange-table .table-row:nth-child(4n) .filter__handler-options, #confirm .resume-table .table-row:nth-child(4n) .filter__handler-options {
+  background-color: rgba(0, 184, 235, 0.5);
+}
+#cart .cart-table .table-row:nth-child(4n-1) .shape__box, #cart .exchange-table .table-row:nth-child(4n-1) .shape__box, #cart .resume-table .table-row:nth-child(4n-1) .shape__box, #exchange .cart-table .table-row:nth-child(4n-1) .shape__box, #exchange .exchange-table .table-row:nth-child(4n-1) .shape__box, #exchange .resume-table .table-row:nth-child(4n-1) .shape__box, #confirm .cart-table .table-row:nth-child(4n-1) .shape__box, #confirm .exchange-table .table-row:nth-child(4n-1) .shape__box, #confirm .resume-table .table-row:nth-child(4n-1) .shape__box {
+  color: var(--green);
+}
+#cart .cart-table .table-row:nth-child(4n-1) .filter__handler-selected, #cart .exchange-table .table-row:nth-child(4n-1) .filter__handler-selected, #cart .resume-table .table-row:nth-child(4n-1) .filter__handler-selected, #exchange .cart-table .table-row:nth-child(4n-1) .filter__handler-selected, #exchange .exchange-table .table-row:nth-child(4n-1) .filter__handler-selected, #exchange .resume-table .table-row:nth-child(4n-1) .filter__handler-selected, #confirm .cart-table .table-row:nth-child(4n-1) .filter__handler-selected, #confirm .exchange-table .table-row:nth-child(4n-1) .filter__handler-selected, #confirm .resume-table .table-row:nth-child(4n-1) .filter__handler-selected {
+  background-color: var(--green);
+}
+#cart .cart-table .table-row:nth-child(4n-1) .filter__handler-options, #cart .exchange-table .table-row:nth-child(4n-1) .filter__handler-options, #cart .resume-table .table-row:nth-child(4n-1) .filter__handler-options, #exchange .cart-table .table-row:nth-child(4n-1) .filter__handler-options, #exchange .exchange-table .table-row:nth-child(4n-1) .filter__handler-options, #exchange .resume-table .table-row:nth-child(4n-1) .filter__handler-options, #confirm .cart-table .table-row:nth-child(4n-1) .filter__handler-options, #confirm .exchange-table .table-row:nth-child(4n-1) .filter__handler-options, #confirm .resume-table .table-row:nth-child(4n-1) .filter__handler-options {
+  background-color: rgba(0, 173, 138, 0.5);
+}
+#cart .cart-table .table-row:nth-child(4n-2) .shape__box, #cart .exchange-table .table-row:nth-child(4n-2) .shape__box, #cart .resume-table .table-row:nth-child(4n-2) .shape__box, #exchange .cart-table .table-row:nth-child(4n-2) .shape__box, #exchange .exchange-table .table-row:nth-child(4n-2) .shape__box, #exchange .resume-table .table-row:nth-child(4n-2) .shape__box, #confirm .cart-table .table-row:nth-child(4n-2) .shape__box, #confirm .exchange-table .table-row:nth-child(4n-2) .shape__box, #confirm .resume-table .table-row:nth-child(4n-2) .shape__box {
+  color: var(--orange);
+}
+#cart .cart-table .table-row:nth-child(4n-2) .filter__handler-selected, #cart .exchange-table .table-row:nth-child(4n-2) .filter__handler-selected, #cart .resume-table .table-row:nth-child(4n-2) .filter__handler-selected, #exchange .cart-table .table-row:nth-child(4n-2) .filter__handler-selected, #exchange .exchange-table .table-row:nth-child(4n-2) .filter__handler-selected, #exchange .resume-table .table-row:nth-child(4n-2) .filter__handler-selected, #confirm .cart-table .table-row:nth-child(4n-2) .filter__handler-selected, #confirm .exchange-table .table-row:nth-child(4n-2) .filter__handler-selected, #confirm .resume-table .table-row:nth-child(4n-2) .filter__handler-selected {
+  background-color: var(--orange);
+}
+#cart .cart-table .table-row:nth-child(4n-2) .filter__handler-options, #cart .exchange-table .table-row:nth-child(4n-2) .filter__handler-options, #cart .resume-table .table-row:nth-child(4n-2) .filter__handler-options, #exchange .cart-table .table-row:nth-child(4n-2) .filter__handler-options, #exchange .exchange-table .table-row:nth-child(4n-2) .filter__handler-options, #exchange .resume-table .table-row:nth-child(4n-2) .filter__handler-options, #confirm .cart-table .table-row:nth-child(4n-2) .filter__handler-options, #confirm .exchange-table .table-row:nth-child(4n-2) .filter__handler-options, #confirm .resume-table .table-row:nth-child(4n-2) .filter__handler-options {
+  background-color: rgba(255, 88, 10, 0.5);
+}
+#cart .cart-table .table-row:nth-child(4n-3) .shape__box, #cart .exchange-table .table-row:nth-child(4n-3) .shape__box, #cart .resume-table .table-row:nth-child(4n-3) .shape__box, #exchange .cart-table .table-row:nth-child(4n-3) .shape__box, #exchange .exchange-table .table-row:nth-child(4n-3) .shape__box, #exchange .resume-table .table-row:nth-child(4n-3) .shape__box, #confirm .cart-table .table-row:nth-child(4n-3) .shape__box, #confirm .exchange-table .table-row:nth-child(4n-3) .shape__box, #confirm .resume-table .table-row:nth-child(4n-3) .shape__box {
+  color: var(--pink);
+}
+#cart .cart-table .table-row:nth-child(4n-3) .filter__handler-selected, #cart .exchange-table .table-row:nth-child(4n-3) .filter__handler-selected, #cart .resume-table .table-row:nth-child(4n-3) .filter__handler-selected, #exchange .cart-table .table-row:nth-child(4n-3) .filter__handler-selected, #exchange .exchange-table .table-row:nth-child(4n-3) .filter__handler-selected, #exchange .resume-table .table-row:nth-child(4n-3) .filter__handler-selected, #confirm .cart-table .table-row:nth-child(4n-3) .filter__handler-selected, #confirm .exchange-table .table-row:nth-child(4n-3) .filter__handler-selected, #confirm .resume-table .table-row:nth-child(4n-3) .filter__handler-selected {
+  background-color: var(--pink);
+}
+#cart .cart-table .table-row:nth-child(4n-3) .filter__handler-options, #cart .exchange-table .table-row:nth-child(4n-3) .filter__handler-options, #cart .resume-table .table-row:nth-child(4n-3) .filter__handler-options, #exchange .cart-table .table-row:nth-child(4n-3) .filter__handler-options, #exchange .exchange-table .table-row:nth-child(4n-3) .filter__handler-options, #exchange .resume-table .table-row:nth-child(4n-3) .filter__handler-options, #confirm .cart-table .table-row:nth-child(4n-3) .filter__handler-options, #confirm .exchange-table .table-row:nth-child(4n-3) .filter__handler-options, #confirm .resume-table .table-row:nth-child(4n-3) .filter__handler-options {
+  background-color: rgba(244, 108, 142, 0.5);
+}
+#cart .cart-table .column__price, #cart .cart-table .column__subtotal, #cart .exchange-table .column__price, #cart .exchange-table .column__subtotal, #cart .resume-table .column__price, #cart .resume-table .column__subtotal, #exchange .cart-table .column__price, #exchange .cart-table .column__subtotal, #exchange .exchange-table .column__price, #exchange .exchange-table .column__subtotal, #exchange .resume-table .column__price, #exchange .resume-table .column__subtotal, #confirm .cart-table .column__price, #confirm .cart-table .column__subtotal, #confirm .exchange-table .column__price, #confirm .exchange-table .column__subtotal, #confirm .resume-table .column__price, #confirm .resume-table .column__subtotal {
+  font-size: 24px;
+  color: var(--blue);
+}
+#cart .cart-table .column__product, #cart .exchange-table .column__product, #cart .resume-table .column__product, #exchange .cart-table .column__product, #exchange .exchange-table .column__product, #exchange .resume-table .column__product, #confirm .cart-table .column__product, #confirm .exchange-table .column__product, #confirm .resume-table .column__product {
+  display: flex;
+  align-items: center;
+  grid-gap: 30px;
+  text-align: left;
+  padding: 20px 30px;
+}
+#cart .cart-table .column__product > span, #cart .exchange-table .column__product > span, #cart .resume-table .column__product > span, #exchange .cart-table .column__product > span, #exchange .exchange-table .column__product > span, #exchange .resume-table .column__product > span, #confirm .cart-table .column__product > span, #confirm .exchange-table .column__product > span, #confirm .resume-table .column__product > span {
+  color: inherit;
+  font-size: 24px;
+  color: var(--blue);
+}
+#cart .cart-table .column__product > div, #cart .exchange-table .column__product > div, #cart .resume-table .column__product > div, #exchange .cart-table .column__product > div, #exchange .exchange-table .column__product > div, #exchange .resume-table .column__product > div, #confirm .cart-table .column__product > div, #confirm .exchange-table .column__product > div, #confirm .resume-table .column__product > div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+#cart .cart-table .column__product > div img, #cart .exchange-table .column__product > div img, #cart .resume-table .column__product > div img, #exchange .cart-table .column__product > div img, #exchange .exchange-table .column__product > div img, #exchange .resume-table .column__product > div img, #confirm .cart-table .column__product > div img, #confirm .exchange-table .column__product > div img, #confirm .resume-table .column__product > div img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+#cart .cart-table .column__product .shape, #cart .exchange-table .column__product .shape, #cart .resume-table .column__product .shape, #exchange .cart-table .column__product .shape, #exchange .exchange-table .column__product .shape, #exchange .resume-table .column__product .shape, #confirm .cart-table .column__product .shape, #confirm .exchange-table .column__product .shape, #confirm .resume-table .column__product .shape {
+  padding: 4px 10px 0 12px;
+}
+#cart .cart-table .column__product .shape .shape__text, #cart .exchange-table .column__product .shape .shape__text, #cart .resume-table .column__product .shape .shape__text, #exchange .cart-table .column__product .shape .shape__text, #exchange .exchange-table .column__product .shape .shape__text, #exchange .resume-table .column__product .shape .shape__text, #confirm .cart-table .column__product .shape .shape__text, #confirm .exchange-table .column__product .shape .shape__text, #confirm .resume-table .column__product .shape .shape__text {
+  color: white;
+  font-size: 10px;
+}
+#cart .cart-table .column__product .shape .shape__box, #cart .exchange-table .column__product .shape .shape__box, #cart .resume-table .column__product .shape .shape__box, #exchange .cart-table .column__product .shape .shape__box, #exchange .exchange-table .column__product .shape .shape__box, #exchange .resume-table .column__product .shape .shape__box, #confirm .cart-table .column__product .shape .shape__box, #confirm .exchange-table .column__product .shape .shape__box, #confirm .resume-table .column__product .shape .shape__box {
+  font-size: 26px;
+}
+#cart .cart-table .column__quantity .filter__handler, #cart .exchange-table .column__quantity .filter__handler, #cart .resume-table .column__quantity .filter__handler, #exchange .cart-table .column__quantity .filter__handler, #exchange .exchange-table .column__quantity .filter__handler, #exchange .resume-table .column__quantity .filter__handler, #confirm .cart-table .column__quantity .filter__handler, #confirm .exchange-table .column__quantity .filter__handler, #confirm .resume-table .column__quantity .filter__handler {
+  margin: auto;
+}
+#cart .exchange-table .column__quantity,
+#cart .resume-table .column__quantity, #exchange .exchange-table .column__quantity,
+#exchange .resume-table .column__quantity, #confirm .exchange-table .column__quantity,
+#confirm .resume-table .column__quantity {
+  font-size: 24px;
+  color: var(--blue);
+}
+#cart .total, #exchange .total, #confirm .total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-gap: 30px;
+  margin-top: 25px;
+}
+#cart .total .total__cart, #exchange .total .total__cart, #confirm .total .total__cart {
+  width: 300px;
+  border: 2px solid var(--sky);
+  border-radius: 10px;
+  overflow: hidden;
+}
+#cart .total .total__cart p, #exchange .total .total__cart p, #confirm .total .total__cart p {
+  background-color: var(--sky);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  padding: 5px 10px;
+}
+#cart .total .total__cart div, #exchange .total .total__cart div, #confirm .total .total__cart div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  padding: 25px 10px;
+}
+#cart .total .total__cart div img, #exchange .total .total__cart div img, #confirm .total .total__cart div img {
+  width: 22px;
+}
+#cart .total .total__cart div span, #exchange .total .total__cart div span, #confirm .total .total__cart div span {
+  font-size: 44px;
+  color: var(--sky);
+  font-weight: 600;
+  position: relative;
+}
+#cart .total .total__cart div span::before, #cart .total .total__cart div span::after, #exchange .total .total__cart div span::before, #exchange .total .total__cart div span::after, #confirm .total .total__cart div span::before, #confirm .total .total__cart div span::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(/images/common/deco-leafs.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateX(-80px);
+}
+#cart .total .total__cart div span::after, #exchange .total .total__cart div span::after, #confirm .total .total__cart div span::after {
+  transform: translateX(68px) scale(-1);
+}
+#cart .total .total__options, #exchange .total .total__options, #confirm .total .total__options {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  width: 300px;
+  margin-bottom: 70px;
+}
+#cart .total .total__options button, #cart .total .total__options a, #exchange .total .total__options button, #exchange .total .total__options a, #confirm .total .total__options button, #confirm .total .total__options a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  text-align: center;
+  width: 100%;
+  min-width: max-content;
+}
+#cart .total .total__options button, #exchange .total .total__options button, #confirm .total .total__options button {
+  background-color: var(--gray-text);
+}
+#cart .total .total__options a, #exchange .total .total__options a, #confirm .total .total__options a {
+  background-color: var(--orange);
+}
+#cart .exchange-table + .total .total__options, #exchange .exchange-table + .total .total__options, #confirm .exchange-table + .total .total__options {
+  justify-content: flex-end;
+}
+#cart .exchange-table + .total .total__options a, #exchange .exchange-table + .total .total__options a, #confirm .exchange-table + .total .total__options a {
+  width: auto;
+  padding: 10px 30px;
+}
+#cart .exchange-table + .total .total__options button, #exchange .exchange-table + .total .total__options button, #confirm .exchange-table + .total .total__options button {
+  background-color: var(--orange);
+}
+#cart .steps, #exchange .steps, #confirm .steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 40px;
+  margin: 60px auto 20px auto;
+}
+#cart .steps .step, #exchange .steps .step, #confirm .steps .step {
+  display: flex;
+  align-items: center;
+}
+#cart .steps .step *, #exchange .steps .step *, #confirm .steps .step * {
+  pointer-events: none;
+}
+#cart .steps .step.step--active .step__title, #exchange .steps .step.step--active .step__title, #confirm .steps .step.step--active .step__title {
+  background-color: var(--pink);
+}
+#cart .steps .step .step__number, #exchange .steps .step .step__number, #confirm .steps .step .step__number {
+  padding: 8px 16px;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+}
+#cart .steps .step .step__number .shape__text, #exchange .steps .step .step__number .shape__text, #confirm .steps .step .step__number .shape__text {
+  display: inline-block;
+  padding-bottom: 2px;
+}
+#cart .steps .step .step__number .shape__box, #exchange .steps .step .step__number .shape__box, #confirm .steps .step .step__number .shape__box {
+  width: 42px;
+}
+#cart .steps .step .step__title, #exchange .steps .step .step__title, #confirm .steps .step .step__title {
+  background-color: var(--gray-text);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 15px 8px 25px;
+  margin-left: -20px;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 1px;
+  width: 175px;
+}
+#cart .step-indicator, #exchange .step-indicator, #confirm .step-indicator {
+  height: 2px;
+  width: 100%;
+  background-color: var(--pink);
+  border-radius: 4px;
+  margin-top: 40px;
+  position: relative;
+}
+#cart .step-indicator .step-indicator__position, #exchange .step-indicator .step-indicator__position, #confirm .step-indicator .step-indicator__position {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: solid var(--pink);
+  border-width: 2px 2px 0 0;
+  background-color: white;
+  transform: rotate(-45deg) skew(15deg, 15deg);
+  border-top-right-radius: 5px;
+  top: -19px;
+  transition: 0.25s;
+}
+#cart .step-content, #exchange .step-content, #confirm .step-content {
+  padding: 10px 60px;
+}
+#cart .step-content .content, #exchange .step-content .content, #confirm .step-content .content {
+  transition: 0.25s;
+}
+#cart .step-content .content:not(.content--active), #exchange .step-content .content:not(.content--active), #confirm .step-content .content:not(.content--active) {
+  display: none;
+  opacity: 0;
+}
+#cart .deco, #exchange .deco, #confirm .deco {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#cart .deco::before, #exchange .deco::before, #confirm .deco::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--pink);
+  top: 32px;
+  z-index: -1;
+  border-radius: 2px;
+}
+#cart .deco img, #exchange .deco img, #confirm .deco img {
+  width: 130px;
+  background-color: white;
+  padding: 20px;
+}
+#cart .personal-data, #exchange .personal-data, #confirm .personal-data {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
+  padding: 60px 0;
+  grid-column-gap: 40px;
+  grid-row-gap: 25px;
+}
+#cart .personal-data > *, #exchange .personal-data > *, #confirm .personal-data > * {
+  width: calc(50% - 20px);
+}
+#cart .personal-data > *.personal-data__confirm, #exchange .personal-data > *.personal-data__confirm, #confirm .personal-data > *.personal-data__confirm {
+  display: flex;
+  justify-content: flex-end;
+}
+#cart .personal-data > *.personal-data__confirm button, #exchange .personal-data > *.personal-data__confirm button, #confirm .personal-data > *.personal-data__confirm button {
+  background-color: var(--orange);
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 8px 25px;
+}
+#cart .location-data, #exchange .location-data, #confirm .location-data {
+  max-width: 700px;
+  padding: 60px 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+}
+#cart .location-data .row, #exchange .location-data .row, #confirm .location-data .row {
+  display: flex;
+  grid-column-gap: 40px;
+}
+#cart .location-data .row > *, #exchange .location-data .row > *, #confirm .location-data .row > * {
+  width: calc(33.3333333333% - 26.6666666667px);
+}
+#cart .location-data .textfield, #exchange .location-data .textfield, #confirm .location-data .textfield {
+  border-color: var(--green);
+  color: var(--green);
+}
+#cart .location-data .location-data__confirm, #exchange .location-data .location-data__confirm, #confirm .location-data .location-data__confirm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#cart .location-data .location-data__confirm button, #exchange .location-data .location-data__confirm button, #confirm .location-data .location-data__confirm button {
+  background-color: var(--orange);
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 8px 25px;
+  height: 48px;
+}
+#cart .exchanged, #exchange .exchanged, #confirm .exchanged {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 20px;
+  padding: 60px 0;
+}
+#cart .exchanged .exchanged__box, #exchange .exchanged .exchanged__box, #confirm .exchanged .exchanged__box {
+  border: 1px solid var(--pink);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 400px;
+}
+#cart .exchanged .exchanged__box p:first-child, #exchange .exchanged .exchanged__box p:first-child, #confirm .exchanged .exchanged__box p:first-child {
+  padding: 20px 30px;
+  background-color: var(--pink);
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+}
+#cart .exchanged .exchanged__box p:first-child span, #exchange .exchanged .exchanged__box p:first-child span, #confirm .exchanged .exchanged__box p:first-child span {
+  color: inherit;
+  display: block;
+  font-size: 22px;
+}
+#cart .exchanged .exchanged__box p:first-child span:last-child, #exchange .exchanged .exchanged__box p:first-child span:last-child, #confirm .exchanged .exchanged__box p:first-child span:last-child {
+  font-weight: 700;
+  font-size: 48px;
+}
+#cart .exchanged .exchanged__box p:first-child span img, #exchange .exchanged .exchanged__box p:first-child span img, #confirm .exchanged .exchanged__box p:first-child span img {
+  display: inline-block;
+  margin-right: 10px;
+}
+#cart .exchanged .exchanged__box p:last-child, #exchange .exchanged .exchanged__box p:last-child, #confirm .exchanged .exchanged__box p:last-child {
+  padding: 20px 30px;
+  font-size: 22px;
+}
+#cart .exchanged .exchange-confirm, #exchange .exchanged .exchange-confirm, #confirm .exchanged .exchange-confirm {
+  display: flex;
+  justify-content: flex-start;
+  width: 400px;
+}
+#cart .exchanged .exchange-confirm a, #exchange .exchanged .exchange-confirm a, #confirm .exchanged .exchange-confirm a {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  color: white;
+  font-weight: 700;
+  background-color: var(--orange);
+  padding: 10px 15px;
+  font-size: 17px;
+  border-radius: 8px;
+}
+#cart .exchanged .exchange-confirm a i, #exchange .exchanged .exchange-confirm a i, #confirm .exchanged .exchange-confirm a i {
+  font-size: 14px;
+}
+#cart .section-desc, #exchange .section-desc, #confirm .section-desc {
+  text-align: center;
+}
+#cart .data, #exchange .data, #confirm .data {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 40px;
+  padding: 60px 150px;
+}
+#cart .data p, #exchange .data p, #confirm .data p {
+  width: calc(33.3333333333% - 26.6666666667px);
+}
+#cart .data p span, #exchange .data p span, #confirm .data p span {
+  display: block;
+  font-size: 20px;
+}
+#cart .data p span:first-child, #exchange .data p span:first-child, #confirm .data p span:first-child {
+  color: var(--sky);
+  font-weight: 500;
+}
+#cart .download, #exchange .download, #confirm .download {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 80px auto;
+}
+#cart .download button, #exchange .download button, #confirm .download button {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  background-color: var(--pink);
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 22px;
+}
+#cart .resume, #exchange .resume, #confirm .resume {
+  padding: 0 100px;
+}
+#cart .resume .resume-table span, #cart .resume .resume-table li, #exchange .resume .resume-table span, #exchange .resume .resume-table li, #confirm .resume .resume-table span, #confirm .resume .resume-table li {
+  font-size: 20px !important;
+}
+
+#confirm .deco {
+  margin-top: 60px;
+}
+#confirm .deco::before {
+  background-color: var(--blue);
+}
+
+/*# sourceMappingURL=exchange.css.map */

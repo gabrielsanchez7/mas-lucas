@@ -20,8 +20,6 @@ const include = (selector) => {
 				const pathname = location.pathname == "/" ? '/home' : location.pathname
 				const currentPage = headerTag.querySelector(`.header__menu-item a[href="${pathname}"] .shape__box`)
 				currentPage?.removeAttribute('hidden')
-
-				// createScriptTag({a: pathname})
 			})
 	} else {
 		const pathname = location.pathname.split('/')[1]
@@ -39,7 +37,7 @@ const include = (selector) => {
 				}
 
 				const currentPage = document.querySelector(`.submenu__item a[href="/${pathname}"]`)
-				const icon = currentPage?.previousElementSibling.querySelector('img')
+				const icon = currentPage?.previousElementSibling.querySelector('i')
 				icon?.removeAttribute('hidden')
 
 				createScriptTag(pathname)
@@ -66,6 +64,7 @@ const loadImports = () => {
 	include('common-modal-auth')
 	include('common-chat-bot')
 	include('common-modal-product')
+	include('common-modal-confirm-lucas')
 }
 
 const createScriptTag = (path) => {

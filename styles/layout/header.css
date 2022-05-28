@@ -5,28 +5,23 @@ header {
   width: 100%;
   z-index: 2;
 }
-
 header.header-2 {
   position: relative;
   background-color: var(--sky);
   border-bottom-right-radius: 50px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
-
 header.header-2 .header {
   padding: 30px 0;
   align-items: center;
 }
-
 header.header-2 .header__menu {
   padding: unset;
 }
-
 header.header-2 .header__logo {
   position: relative;
   transform-style: preserve-3d;
 }
-
 header.header-2 .header__logo::after {
   content: "";
   display: block;
@@ -39,7 +34,6 @@ header.header-2 .header__logo::after {
   background-color: var(--blue);
   transform: rotate(-54deg) skewX(30deg) translateZ(-1px);
 }
-
 header.header-2 .header__logo::before {
   content: "";
   display: block;
@@ -52,45 +46,37 @@ header.header-2 .header__logo::before {
   background-color: var(--pink);
   transform: rotate(-67deg) skewX(15deg) translateZ(-1px);
 }
-
 header .header {
   padding: 30px 0 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
-
 header .header__logo img {
   display: block;
   width: 110px;
 }
-
 header .header__menu {
   padding-top: 20px;
 }
-
 header .header__menu-item {
   display: inline-block;
   color: white;
 }
-
 header .header__menu-item a {
   display: block;
   padding: 3px 20px 6px 20px;
   font-weight: 500;
 }
-
 header .header__user {
   display: inline-flex;
   align-items: center;
   margin-left: 10px;
   position: relative;
 }
-
 header .header__user-action:active, header .header__user-icon:active {
   transform: translateY(1px);
 }
-
 header .header__user-action {
   cursor: pointer;
   background-color: white;
@@ -104,14 +90,12 @@ header .header__user-action {
   align-items: center;
   grid-gap: 15px;
 }
-
 header .header__cart {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-
 header .header__cart-counter {
   position: absolute;
   display: flex;
@@ -128,11 +112,10 @@ header .header__cart-counter {
   top: -5px;
   right: -8px;
 }
-
-header .header__cart img {
+header .header__cart i {
   width: 18px;
+  color: var(--sky);
 }
-
 header .header__user-icon {
   display: block;
   height: 46px;
@@ -141,7 +124,6 @@ header .header__user-icon {
   cursor: pointer;
   z-index: 2;
 }
-
 header .header .submenu {
   position: absolute;
   top: 60px;
@@ -154,7 +136,6 @@ header .header .submenu {
   box-shadow: 0 4px 6px 0 var(--gray-shadow);
   display: none;
 }
-
 header .header .submenu::before {
   content: "";
   display: block;
@@ -167,28 +148,27 @@ header .header .submenu::before {
   border-radius: 3px;
   transform: rotate(45deg) skew(10deg, 10deg);
 }
-
 header .header .submenu__item {
   color: white;
 }
-
 header .header .submenu__item:not(:first-child) {
   display: flex;
   align-items: center;
   grid-gap: 7px;
 }
-
 header .header .submenu__item-icon {
   width: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+header .header .submenu__item-icon i {
+  width: 100%;
+  font-size: 26px;
+}
 header .header .submenu__item--active {
   color: var(--pink);
 }
-
 header .header .submenu__item--name {
   color: var(--sky);
   font-size: 18px;
@@ -197,7 +177,6 @@ header .header .submenu__item--name {
   border-bottom: 1px solid rgba(0, 184, 235, 0.25);
   margin-bottom: 10px;
 }
-
 header .header .submenu__item--name span {
   display: flex;
   align-items: center;
@@ -207,22 +186,18 @@ header .header .submenu__item--name span {
   font-size: 14px;
   margin-top: 3px;
 }
-
 header .header .submenu__item--name span i {
   color: var(--yellow);
 }
-
 header .header .submenu__item:not(:first-child):not(:last-child) {
   font-size: 18px;
   line-height: 34px;
   font-weight: 300;
 }
-
 header .header .submenu__item:not(:first-child):not(:last-child) i {
   color: var(--pink);
   margin-right: 5px;
 }
-
 header .header .submenu__item--logout {
   color: rgba(0, 184, 235, 0.4);
   border-top: 1px solid rgba(0, 184, 235, 0.25);
@@ -232,11 +207,9 @@ header .header .submenu__item--logout {
   margin-top: 10px;
   cursor: pointer;
 }
-
 header .header .submenu__item--logout i {
   color: inherit;
   margin: 5px;
-  padding-top: 5px;
 }
 
 /*# sourceMappingURL=header.css.map */
