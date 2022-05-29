@@ -1,0 +1,323 @@
+#news-detail {
+  padding: 150px 0 40px 0;
+
+  .section-title__text {
+    color: var(--pink);
+    text-transform: unset;
+  }
+
+  .content {
+    padding: 20px 40px;
+  }
+  
+  .hero {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-image: url(/images/news/deco-banner.png);
+      background-repeat: no-repeat;
+      background-position: calc(0px + 10px) calc(100% - 5px);
+      background-size: 120px auto;
+      pointer-events: none;
+    }
+    
+    .hero__category {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--blue);
+      font-size: 12px;
+      color: white;
+      border-radius: 10px;
+      padding: 4px 10px;
+    }
+    
+    img { width: 100%; }
+    
+  }
+
+  .title {
+    color: var(--blue);
+    font-size: 44px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 40px;
+    display: inline-block;
+    margin: 30px 0;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 60px;
+      background-image: url(/images/common/deco-leafs.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      left: 0;
+      transform: scaleY(-1);
+    }
+    &::after {
+      right: -45px;
+      transform: scale(-1);
+    }
+    
+  }
+
+  .paragraph {
+    font-weight: 300;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  .note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .note__author {
+      display: flex;
+      align-items: center;
+      grid-gap: 10px;
+
+      img { width: 60px; }
+
+      b {
+        color: var(--sky);
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      small {
+        display: block;
+        font-size: 12px;
+        margin-top: 2px;
+      }
+      
+    }
+
+    .note__share {
+      display: flex;
+      align-items: center;
+      grid-gap: 5px;
+
+      span {
+        font-size: 12px;
+        color: var(--sky);
+        margin-right: 10px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--pink);
+        color: white;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        font-size: 14px;
+      }
+      
+    }
+    
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: var(--blue);
+      border-radius: 2px;
+    }
+
+    img {
+      padding: 0 20px;
+      width: 110px;
+      background-color: white;
+      position: relative;
+    }
+    
+  }
+
+  .comment {
+    margin-bottom: 120px;
+
+    .comment__title {
+      font-weight: 600;
+      color: var(--sky);
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .comment__form {
+      
+      .form__inputs {
+        display: flex;
+        grid-gap: 20px;
+
+        & > .textfield {
+          width: calc(60% - 10px);
+          height: 116px;
+          
+          textarea {
+            resize: none;
+            padding-top: 24px;
+          }
+          
+        }
+
+        .form__col {
+          width: calc(40% - 10px);
+          display: flex;
+          flex-direction: column;
+          grid-gap: 20px;
+        }
+        
+      }
+      
+      .form__action {
+        color: white;
+        padding: 7px 20px 10px 20px;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        float: right;
+      }
+
+    }
+    
+  }
+  
+  .recents {
+
+    .recents__title {
+      font-weight: 600;
+      color: var(--sky);
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .recents__list {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 30px;
+
+      $colors: 0 var(--blue) var(--orange), 1 var(--green) var(--pink), 2 var(--pink) var(--green), 3 var(--sky) var(--blue);
+
+      @each $key, $color, $tagColor in $colors {
+
+        .recent:nth-child(4n - #{$key}) {
+          width: calc(100% / 4 - 90px / 4);
+          border: 1px solid $color;
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+
+          .recent__category {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 10px;
+            color: white;
+            background-color: $tagColor;
+            padding: 2px 6px 3px;
+            border-radius: 10px;
+            z-index: 1;
+          }
+  
+          .recent__img {
+            height: 250px;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+            
+            img {
+              width: 100%;
+            }
+
+          }
+
+          .recent__detail {
+            padding: 20px;
+          }
+          
+          .recent__title {
+            color: $color;
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          .recent__desc {
+            margin: 10px 0 20px 0;
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .recent__bottom {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+          }
+          
+          .recent__date {
+            font-size: 12px;
+          }
+
+          .recent__read {
+            text-transform: uppercase;
+            color: white;
+            font-weight: 700;
+            font-size: 10px;
+            padding: 3px 10px 5px 10px;
+            margin-right: 10px;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              display: block;
+              height: 20px;
+              width: 20px;
+              top: -10px;
+              right: -10px;
+              background-image: url(/images/common/deco-leafs.png);
+              background-repeat: no-repeat;
+              background-size: contain;
+              transform: rotate(143deg);
+            }
+            
+          }
+          
+        }
+
+      }
+      
+    }
+    
+  }
+
+}
