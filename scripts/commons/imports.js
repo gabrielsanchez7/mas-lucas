@@ -8,11 +8,11 @@ const include = (selector) => {
 
 	if (selector.startsWith('common-')) {
 		const path = selector.split('common-')[1]
-		fetch(`/views/commons/${path}.html`)
+		fetch(`views/commons/${path}.html`)
 			.then(file => file.text())
 			.then(text => tag.outerHTML = text)
 	} else if (selector != 'router') {
-		fetch(`/views/layout/${selector}.html`)
+		fetch(`views/layout/${selector}.html`)
 			.then(file => file.text())
 			.then(text => {
 				tag.outerHTML = text
@@ -23,7 +23,7 @@ const include = (selector) => {
 			})
 	} else {
 		const pathname = location.pathname.split('/')[1]
-		const view = pathname == "" ? `/views/pages/home.html` : `/views/pages/${pathname}.html`
+		const view = pathname == "" ? `views/pages/home.html` : `views/pages/${pathname}.html`
 
 		fetch(view)
 			.then(file => file.text())
@@ -71,6 +71,6 @@ const createScriptTag = (path) => {
 	path = path == '' ? 'home' : path
 	const scriptTag = document.createElement('script')
 	scriptTag.setAttribute('type', 'module')
-	scriptTag.setAttribute('src', `/scripts/pages/${path}.js`)
+	scriptTag.setAttribute('src', `scripts/pages/${path}.js`)
 	document.head.appendChild(scriptTag)
 }
