@@ -196,7 +196,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateX(-80px);

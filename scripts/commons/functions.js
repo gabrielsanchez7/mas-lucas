@@ -67,11 +67,11 @@ export function openModal(selector, closeCallback = () => {}) {
 
 /** Carga los productos y reemplaza la información */
 export async function loadProduct(container, limit) {
-  const data = await fetch('/data/products.json').then(res => res.json())
+  const data = await fetch('data/products.json').then(res => res.json())
   limit = limit == null ? data.length : limit
   data.forEach(async (it, key) => {
     if(key < limit) {
-      let template = await fetch('/views/commons/product.html').then(res => res.text())
+      let template = await fetch('views/commons/product.html').then(res => res.text())
       template = template.replace(/{{price}}/, it.price)
       template = template.replace(/{{image}}/, it.image)
       template = template.replace(/{{name}}/g, it.name)

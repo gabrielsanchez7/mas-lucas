@@ -18,7 +18,7 @@
 }
 
 .modal-product .container {
-  background-image: url(/images/products/bg-modal-added-cart.png);
+  background-image: url(images/products/bg-modal-added-cart.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 354px;
@@ -150,7 +150,7 @@
 }
 
 #modal-confirm-lucas .modal-container {
-  background-image: url(/images/products/bg-modal-added-cart.png);
+  background-image: url(images/products/bg-modal-added-cart.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 354px;
@@ -240,7 +240,7 @@
   width: 60px;
   top: 0;
   left: -60px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
@@ -701,7 +701,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateX(-80px);
@@ -1234,8 +1234,8 @@
   position: relative;
   z-index: 1;
   padding: 2px;
-  mask-image: url(/images/learning/bg-detail.png);
-  -webkit-mask-image: url(/images/learning/bg-detail.png);
+  mask-image: url(images/learning/bg-detail.png);
+  -webkit-mask-image: url(images/learning/bg-detail.png);
   mask-size: calc(100% - 4px);
   -webkit-mask-size: calc(100% - 4px);
   mask-repeat: no-repeat;
@@ -1384,7 +1384,7 @@
   display: inline-block;
   height: 28px;
   width: 20px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1589,7 +1589,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-image: url(/images/news/deco-banner.png);
+  background-image: url(images/news/deco-banner.png);
   background-repeat: no-repeat;
   background-position: 10px calc(100% - 5px);
   background-size: 120px auto;
@@ -1625,7 +1625,7 @@
   top: 100%;
   width: 50px;
   height: 30px;
-  background-image: url(/images/news/deco-news.png);
+  background-image: url(images/news/deco-news.png);
   background-repeat: no-repeat;
   background-size: contain;
   left: calc(50% - 25px);
@@ -1728,7 +1728,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -1801,7 +1801,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -1874,7 +1874,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -1947,7 +1947,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -1988,7 +1988,7 @@
   height: 15px;
   top: 0;
   left: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: scaleY(-1) rotate(-25deg);
@@ -2018,7 +2018,7 @@
   height: 15px;
   top: 0;
   left: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: scaleY(-1) rotate(-25deg);
@@ -2048,7 +2048,7 @@
   height: 15px;
   top: 0;
   left: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: scaleY(-1) rotate(-25deg);
@@ -2078,7 +2078,7 @@
   height: 15px;
   top: 0;
   left: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: scaleY(-1) rotate(-25deg);
@@ -2110,7 +2110,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-image: url(/images/news/deco-banner.png);
+  background-image: url(images/news/deco-banner.png);
   background-repeat: no-repeat;
   background-position: 10px calc(100% - 5px);
   background-size: 120px auto;
@@ -2143,7 +2143,7 @@
   position: absolute;
   width: 35px;
   height: 60px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2343,7 +2343,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -2416,7 +2416,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -2489,7 +2489,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -2562,7 +2562,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(/images/common/deco-leafs.png);
+  background-image: url(images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -2658,8 +2658,8 @@
   position: relative;
   z-index: 1;
   padding: 2px;
-  mask-image: url(/images/learning/bg-detail.png);
-  -webkit-mask-image: url(/images/learning/bg-detail.png);
+  mask-image: url(images/learning/bg-detail.png);
+  -webkit-mask-image: url(images/learning/bg-detail.png);
   mask-size: calc(100% - 4px);
   -webkit-mask-size: calc(100% - 4px);
   mask-repeat: no-repeat;

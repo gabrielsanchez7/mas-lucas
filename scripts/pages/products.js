@@ -46,9 +46,9 @@ const priceSelector = () => {
 
 /** Carga de productos */
 const loadProducts = async () => {
-	const data = await fetch('/data/products.json').then(res => res.json())
+	const data = await fetch('data/products.json').then(res => res.json())
 	data.forEach(async (it, key) => {
-		let template = await fetch('/views/commons/product.html').then(res => res.text())
+		let template = await fetch('views/commons/product.html').then(res => res.text())
 		const container = document.querySelector('.store__products')
 		template = template.replace(/{{price}}/, it.price)
 		template = template.replace(/{{image}}/, it.image)
