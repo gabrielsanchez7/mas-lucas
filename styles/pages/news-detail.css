@@ -18,7 +18,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-image: url(images/news/deco-banner.png);
+  background-image: url(../../images/news/deco-banner.png);
   background-repeat: no-repeat;
   background-position: 10px calc(100% - 5px);
   background-size: 120px auto;
@@ -51,7 +51,7 @@
   position: absolute;
   width: 35px;
   height: 60px;
-  background-image: url(images/common/deco-leafs.png);
+  background-image: url(../../images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -251,7 +251,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(images/common/deco-leafs.png);
+  background-image: url(../../images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -324,7 +324,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(images/common/deco-leafs.png);
+  background-image: url(../../images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -397,7 +397,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(images/common/deco-leafs.png);
+  background-image: url(../../images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);
@@ -470,7 +470,7 @@
   width: 20px;
   top: -10px;
   right: -10px;
-  background-image: url(images/common/deco-leafs.png);
+  background-image: url(../../images/common/deco-leafs.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(143deg);

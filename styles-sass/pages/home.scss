@@ -13,7 +13,7 @@
 		height: 100%;
 		width: 100%;
 		top: 0;
-		background-image: url(../..images/home/deco-welcome.png);
+		background-image: url(../../images/home/deco-welcome.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		transform: translateZ(-1px);
@@ -156,12 +156,12 @@
 		background-size: contain;
 	}
 	
-	.step-section--join .step-section__info-title::before { background-image: url(images/home/deco-join.png); }
-	.step-section--connect .step-section__info-title::before { background-image: url(images/home/deco-connect.png); }
+	.step-section--join .step-section__info-title::before { background-image: url(../../images/home/deco-join.png); }
+	.step-section--connect .step-section__info-title::before { background-image: url(../../images/home/deco-connect.png); }
 	.step-section--exchange .step-section__info-title::before {
 		height: 45px;
 		width: 45px;
-		background-image: url(images/home/deco-exchange.png);
+		background-image: url(../../images/home/deco-exchange.png);
 	}
 	
 	.step-section--connect { flex-flow: row-reverse; }
