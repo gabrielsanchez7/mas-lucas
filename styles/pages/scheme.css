@@ -1,0 +1,485 @@
+#scheme .tab:not(:last-child) {
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--blue);
+}
+#scheme .tab__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#scheme .tab__bar .tab__bar__btn {
+  color: white;
+  padding: 15px 40px 20px 40px;
+  font-weight: 600;
+  font-size: 22px;
+  position: relative;
+}
+#scheme .tab__bar .tab__bar__btn > * {
+  pointer-events: none;
+}
+#scheme .tab__bar .tab__bar__btn .shape__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#scheme .tab__bar .tab__bar__btn::after {
+  content: "\e91c";
+  font-family: "icomoon";
+  color: white;
+  position: absolute;
+  font-size: 10px;
+  bottom: 9px;
+}
+#scheme .tab__content {
+  background-color: #E5E6E8;
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--blue);
+  margin-top: 40px;
+  position: relative;
+}
+#scheme .tab__content .tab__indicator {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: solid var(--blue);
+  border-width: 1.5px 1.5px 0 0;
+  background-color: #E5E6E8;
+  transform: rotate(-45deg) skew(15deg, 15deg);
+  border-top-right-radius: 5px;
+  top: -20px;
+  transition: 0.25s;
+}
+#scheme .tab__content .content {
+  transition: 0.25s;
+}
+#scheme .tab__content .content:not(.content--active) {
+  display: none;
+  opacity: 0;
+}
+#scheme .tab__content .content .content__tabs {
+  display: flex;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+#scheme .tab__content .content .content__tabs .content__tab {
+  display: block;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 300;
+  padding: 3px 5px;
+}
+#scheme .tab__content .content .content__tabs .content__tab.content__tab--active {
+  background-color: var(--orange);
+  color: white;
+}
+#scheme .tab__content .content .content__tables {
+  display: flex;
+  grid-gap: 30px;
+}
+#scheme .tab__content .content .content__tables .table {
+  width: calc(50% - 15px);
+  border-radius: 10px;
+  border: 1px solid var(--green);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+#scheme .tab__content .content .content__tables .table .table__head, #scheme .tab__content .content .content__tables .table .table__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+}
+#scheme .tab__content .content .content__tables .table .table__head {
+  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--green);
+  padding: 10px 0;
+}
+#scheme .tab__content .content .content__tables .table .table__row {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+#scheme .tab__content .content .content__tables .table .table__col {
+  color: inherit;
+  width: 100%;
+  padding: 0 10px;
+}
+#scheme .tab__content .content .content__tables .table.table--1 .table__row .table__col:nth-child(1) {
+  color: var(--green);
+}
+#scheme .tab__content .content .content__tables .table.table--2 {
+  border-color: var(--sky);
+}
+#scheme .tab__content .content .content__tables .table.table--2 .table__head {
+  background-color: var(--sky);
+}
+#scheme .tab__content .content .content__tables .table.table--2 img {
+  width: 30px;
+}
+#scheme .tab__content .content .content__tables .table.table--2 .table__row .table__col:last-child {
+  color: var(--orange);
+}
+#scheme .incentives {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 40px;
+}
+#scheme .incentives .incentive {
+  width: calc(33.3333333333% - 26.6666666667px);
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__title {
+  display: flex;
+  justify-content: center;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__title p {
+  background-color: var(--green);
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 7px 35px;
+  border-radius: 10px;
+  margin-bottom: -20px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__title p::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: calc(100% + 10px);
+  width: calc(100% + 20px);
+  top: -5px;
+  left: -10px;
+  background-color: #E5E6E8;
+  transform: translateZ(-1px);
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__box {
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: 60px 40px 40px;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__recharge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 50px;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__recharge:first-child {
+  margin-bottom: 20px;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__recharge p:first-child {
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__recharge p:not(:first-child) {
+  background-color: var(--green);
+  color: white;
+  font-weight: 700;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  min-width: 98px;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__conditions {
+  margin-top: 25px;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__conditions b {
+  color: var(--green);
+  font-weight: 500;
+}
+#scheme .incentives .incentive:nth-child(1) .incentive__conditions p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 10px;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus:first-child {
+  margin-bottom: 15px;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus:not(:last-child):not(:first-child) {
+  margin-bottom: 25px;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus:first-child p:not(:first-child):not(:last-child) {
+  min-width: 90px;
+  color: var(--green);
+  text-align: center;
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus p:first-child {
+  min-width: 50px;
+  color: var(--green);
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus:not(:first-child) p:not(:first-child):not(:last-child) {
+  font-weight: 700;
+  font-size: 20px;
+  background-color: var(--green);
+  border-radius: 10px;
+  min-width: 90px;
+  padding: 12px 20px;
+  color: white;
+  position: relative;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus img, #scheme .incentives .incentive:nth-child(1) .bonus p:last-child {
+  min-width: 40px;
+  width: 40px;
+}
+#scheme .incentives .incentive:nth-child(1) .bonus small {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__title {
+  display: flex;
+  justify-content: center;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__title p {
+  background-color: var(--pink);
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 7px 35px;
+  border-radius: 10px;
+  margin-bottom: -20px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__title p::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: calc(100% + 10px);
+  width: calc(100% + 20px);
+  top: -5px;
+  left: -10px;
+  background-color: #E5E6E8;
+  transform: translateZ(-1px);
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__box {
+  border: 1px solid var(--pink);
+  border-radius: 10px;
+  padding: 60px 40px 40px;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__recharge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__recharge:first-child {
+  margin-bottom: 20px;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__recharge p:first-child {
+  color: var(--pink);
+  font-size: 20px;
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__recharge p:not(:first-child) {
+  background-color: var(--pink);
+  color: white;
+  font-weight: 700;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  min-width: 98px;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__conditions {
+  margin-top: 25px;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__conditions b {
+  color: var(--pink);
+  font-weight: 500;
+}
+#scheme .incentives .incentive:nth-child(2) .incentive__conditions p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 10px;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus:first-child {
+  margin-bottom: 15px;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus:not(:last-child):not(:first-child) {
+  margin-bottom: 25px;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus:first-child p:not(:first-child):not(:last-child) {
+  min-width: 90px;
+  color: var(--pink);
+  text-align: center;
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus p:first-child {
+  min-width: 50px;
+  color: var(--pink);
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus:not(:first-child) p:not(:first-child):not(:last-child) {
+  font-weight: 700;
+  font-size: 20px;
+  background-color: var(--pink);
+  border-radius: 10px;
+  min-width: 90px;
+  padding: 12px 20px;
+  color: white;
+  position: relative;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus img, #scheme .incentives .incentive:nth-child(2) .bonus p:last-child {
+  min-width: 40px;
+  width: 40px;
+}
+#scheme .incentives .incentive:nth-child(2) .bonus small {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__title {
+  display: flex;
+  justify-content: center;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__title p {
+  background-color: var(--blue);
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 7px 35px;
+  border-radius: 10px;
+  margin-bottom: -20px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__title p::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: calc(100% + 10px);
+  width: calc(100% + 20px);
+  top: -5px;
+  left: -10px;
+  background-color: #E5E6E8;
+  transform: translateZ(-1px);
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__box {
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  padding: 60px 40px 40px;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__recharge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 50px;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__recharge:first-child {
+  margin-bottom: 20px;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__recharge p:first-child {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__recharge p:not(:first-child) {
+  background-color: var(--blue);
+  color: white;
+  font-weight: 700;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  min-width: 98px;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__conditions {
+  margin-top: 25px;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__conditions b {
+  color: var(--blue);
+  font-weight: 500;
+}
+#scheme .incentives .incentive:nth-child(3) .incentive__conditions p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 10px;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus:first-child {
+  margin-bottom: 15px;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus:not(:last-child):not(:first-child) {
+  margin-bottom: 25px;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus:first-child p:not(:first-child):not(:last-child) {
+  min-width: 90px;
+  color: var(--blue);
+  text-align: center;
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus p:first-child {
+  min-width: 50px;
+  color: var(--blue);
+  font-weight: 600;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus:not(:first-child) p:not(:first-child):not(:last-child) {
+  font-weight: 700;
+  font-size: 20px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  min-width: 90px;
+  padding: 12px 20px;
+  color: white;
+  position: relative;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus img, #scheme .incentives .incentive:nth-child(3) .bonus p:last-child {
+  min-width: 40px;
+  width: 40px;
+}
+#scheme .incentives .incentive:nth-child(3) .bonus small {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+}
+#scheme .incentives .incentive:last-child .incentive__box {
+  padding-top: 44px;
+}
+
+/*# sourceMappingURL=scheme.css.map */
