@@ -16,6 +16,8 @@ const loadScripts = () => {
   console.log({tabs})
   tabs.forEach(it => tabPosition(it))
 
+  innerTabs()
+
 }
 
 /** Ubica el indicador de los tabs dependiendo del paso de canje seleccionado */
@@ -58,4 +60,31 @@ const tabPosition = (selector) => {
     })
   })
   
+}
+
+const innerTabs = () => {
+  const tabs = document.querySelectorAll('.content__tab')
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      const t = e.target
+      const container = t.closest('.content')
+      const idx = t.getAttribute('data-inner-content')
+      const currentContent = container.querySelector('.content__tabs__content--active')
+      const newContent = container.querySelector(`.content__tabs__content[data-inner-content="${idx}"]`)
+
+      t.classList.add('content__tab--active')
+      const sibs = Functions.allSiblings(t)
+      console.log(sibs)
+      sibs.forEach(sib => sib.classList.remove('content__tab--active'))
+      
+      currentContent.style.opacity = '0'
+      setTimeout(() => {
+        currentContent.style.display = 'none'
+        currentContent.classList.remove('content__tabs__content--active')
+        newContent.style.display = 'block'
+        newContent.classList.add('content__tabs__content--active')
+        setTimeout(() => newContent.style.opacity = '1', 100)
+      }, 250)
+    })
+  })
 }
