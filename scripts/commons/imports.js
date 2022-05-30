@@ -22,7 +22,8 @@ const include = (selector) => {
 				currentPage?.removeAttribute('hidden')
 			})
 	} else {
-		const pathname = location.pathname.split('/')[1]
+		const paths = location.pathname.split('/')
+		const pathname = paths[paths.length - 1]
 		const view = pathname == "" ? `views/pages/home.html` : `views/pages/${pathname}.html`
 
 		fetch(view)
