@@ -27,13 +27,13 @@
   justify-content: center;
 }
 #modal-auth .auth-form--login {
-  background-image: url(../images/layout/login-bg.png);
+  background-image: url(../../images/layout/login-bg.png);
 }
 #modal-auth .auth-form--signup {
-  background-image: url(../images/layout/signup-bg.png);
+  background-image: url(../../images/layout/signup-bg.png);
 }
 #modal-auth .auth-form--reset {
-  background-image: url(../images/layout/reset-bg.png);
+  background-image: url(../../images/layout/reset-bg.png);
   padding-top: 40px;
 }
 #modal-auth .auth-form__title {
