@@ -8,11 +8,11 @@ const include = (selector) => {
 
 	if (selector.startsWith('common-')) {
 		const path = selector.split('common-')[1]
-		fetch(`views/commons/${path}.html`)
+		fetch(`../../views/commons/${path}.html`)
 			.then(file => file.text())
 			.then(text => tag.outerHTML = text)
 	} else if (selector != 'router') {
-		fetch(`views/layout/${selector}.html`)
+		fetch(`../../views/layout/${selector}.html`)
 			.then(file => file.text())
 			.then(text => {
 				tag.outerHTML = text
@@ -22,27 +22,27 @@ const include = (selector) => {
 				currentPage?.removeAttribute('hidden')
 			})
 	} else {
-		const paths = location.pathname.split('/')
-		const pathname = paths[paths.length - 1]
-		const view = pathname == "" ? `views/pages/home.html` : `views/pages/${pathname}.html`
+		// const paths = location.pathname.split('/')
+		// const pathname = paths[paths.length - 1]
+		// const view = pathname == "" ? `views/pages/home.html` : `views/pages/${pathname}.html`
 
-		fetch(view)
-			.then(file => file.text())
-			.then(text => {
-				tag.innerHTML = text
-				const headerH = document.querySelector('header')?.clientHeight
-				const start = tag.querySelector('[data-start]')
+		// fetch(view)
+		// 	.then(file => file.text())
+		// 	.then(text => {
+		// 		tag.innerHTML = text
+		// 		const headerH = document.querySelector('header')?.clientHeight
+		// 		const start = tag.querySelector('[data-start]')
 				
-				if(start != null) {
-					start.style.paddingTop = `${headerH}px`
-				}
+		// 		if(start != null) {
+		// 			start.style.paddingTop = `${headerH}px`
+		// 		}
 
-				const currentPage = document.querySelector(`.submenu__item a[href="/${pathname}"]`)
-				const icon = currentPage?.previousElementSibling.querySelector('i')
-				icon?.removeAttribute('hidden')
+		// 		const currentPage = document.querySelector(`.submenu__item a[href="/${pathname}"]`)
+		// 		const icon = currentPage?.previousElementSibling.querySelector('i')
+		// 		icon?.removeAttribute('hidden')
 
-				createScriptTag(pathname)
-			})
+				// createScriptTag(pathname)
+		// 	})
 	}
 
 }
