@@ -5,7 +5,7 @@
 }
 
 .modal-product .container {
-  background-image: url(../../images/products/bg-modal-added-cart.png);
+  background-image: url(../images/products/bg-modal-added-cart.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 354px;
@@ -137,7 +137,7 @@
 }
 
 #modal-confirm-lucas .modal-container {
-  background-image: url(../../images/products/bg-modal-added-cart.png);
+  background-image: url(../images/products/bg-modal-added-cart.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 354px;

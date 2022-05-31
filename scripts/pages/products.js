@@ -71,7 +71,7 @@ const handleProductModals = () => {
 			const action = t.getAttribute('data-action')
 
 			if(action == 'expand') {
-				location.href = '/product-detail'
+				location.href = '../../views/pages/product-detail.html'
 			} else {
 				const conditionContainer = document.querySelector(`.modal-product .modal-container`)
 				const def = conditionContainer.innerHTML
