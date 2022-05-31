@@ -17,33 +17,14 @@ const include = (selector) => {
 			.then(text => {
 				tag.outerHTML = text
 				const headerTag = document.querySelector('header')
-				const pathname = location.pathname == "/" ? '/home' : location.pathname
-				const currentPage = headerTag.querySelector(`.header__menu-item a[href="${pathname}"] .shape__box`)
+				const paths = location.pathname.split('/')
+				const fileName = paths[paths.length - 1].split('.html')[0]
+				const currentPage = headerTag.querySelector(`.header__menu-item a[data-menu="${fileName}"] .shape__box`)
+				const currentSubpage = headerTag.querySelector(`.submenu [data-menu="${fileName}"] .icon-bird`)
 				currentPage?.removeAttribute('hidden')
+				currentSubpage?.removeAttribute('hidden')
 			})
-	} else {
-		// const paths = location.pathname.split('/')
-		// const pathname = paths[paths.length - 1]
-		// const view = pathname == "" ? `views/pages/home.html` : `views/pages/${pathname}.html`
-
-		// fetch(view)
-		// 	.then(file => file.text())
-		// 	.then(text => {
-		// 		tag.innerHTML = text
-		// 		const headerH = document.querySelector('header')?.clientHeight
-		// 		const start = tag.querySelector('[data-start]')
-				
-		// 		if(start != null) {
-		// 			start.style.paddingTop = `${headerH}px`
-		// 		}
-
-		// 		const currentPage = document.querySelector(`.submenu__item a[href="/${pathname}"]`)
-		// 		const icon = currentPage?.previousElementSibling.querySelector('i')
-		// 		icon?.removeAttribute('hidden')
-
-				// createScriptTag(pathname)
-		// 	})
-	}
+	} 
 
 }
 
@@ -66,12 +47,4 @@ const loadImports = () => {
 	include('common-chat-bot')
 	include('common-modal-product')
 	include('common-modal-confirm-lucas')
-}
-
-const createScriptTag = (path) => {
-	path = path == '' ? 'home' : path
-	const scriptTag = document.createElement('script')
-	scriptTag.setAttribute('type', 'module')
-	scriptTag.setAttribute('src', `scripts/pages/${path}.js`)
-	document.head.appendChild(scriptTag)
 }
