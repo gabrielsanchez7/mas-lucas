@@ -66,7 +66,7 @@
   margin-top: 5px;
 }
 
-.modal-product__options > * {
+.modal-product__options > *:not(.filter__handler):not(span) {
   width: 160px;
   border-radius: 7px;
   text-transform: uppercase;
