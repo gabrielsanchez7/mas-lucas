@@ -1,9 +1,27 @@
 .chat-bot {
-  position: relative;
+  position: fixed;
   z-index: 1;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 430px;
+
+  &.chat-bot--opened {
+
+    .chat-bot__preview {
+      position: absolute;
+      top: 36%;
+      left: -120px;
+    }
+    
+    .chat-bot__chat {
+      transform: translateY(0);
+    }
+    
+  }
 
   .chat-bot__preview {
-    position: fixed;
+    position: absolute;
     bottom: 50px;
     right: 50px;
     display: block;
@@ -43,7 +61,7 @@
   
   .chat-bot__chat {
     width: 350px;
-    position: fixed;
+    position: absolute;
     right: 50px;
     bottom: 10px;
     z-index: 1;

@@ -284,10 +284,13 @@ const toggleCheckbox = () => {
 const chatbot = () => {
 	const caller = document.querySelector('.chat-bot__preview')
 	caller?.addEventListener('click', () => {
-		const chat = document.querySelector('.chat-bot__chat')
+		const chat =  caller.closest('.chat-bot')
+		const isOpened = chat.classList.contains('chat-bot--opened')
+		
+		if(isOpened) { chat.classList.remove('chat-bot--opened') }
+		else { chat.classList.add('chat-bot--opened') }
+		
 		const close = chat.querySelector('.chat__close')
-
-		chat.style.transform = 'translateY(0)'
-		close.addEventListener('click', () => chat.removeAttribute('style'))
+		close.addEventListener('click', () => chat.classList.remove('chat-bot--opened'))
 	})
 }

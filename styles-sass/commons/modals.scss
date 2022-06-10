@@ -179,3 +179,19 @@
   }
   
 }
+
+// Hello
+#modal-hello {
+
+	.modal-container {
+		width: 750px;
+		transform: translateY(100vh);
+		transition: 0.2s;
+	}
+
+	img {
+		width: calc(100% - 40px);
+		margin-top: 20px;
+	}
+	
+}

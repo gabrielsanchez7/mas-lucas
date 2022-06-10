@@ -1,3 +1,5 @@
+import * as Functions from '../commons/functions.js'
+
 /** Valida que los componentes principales se hayan cargado */
 const layoutInterval = setInterval(() => {
 	const header = document.querySelector('header')
@@ -10,8 +12,13 @@ const layoutInterval = setInterval(() => {
 
 const loadScripts = () => {
 
+	bannerPrincipal()
 	scrollButton()
 
+}
+
+const bannerPrincipal = () => {
+	Functions.openModal('#modal-hello')
 }
 
 /** [HOME] Click en el botón de scroll en el banner principal */

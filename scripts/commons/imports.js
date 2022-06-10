@@ -43,6 +43,7 @@ const layoutInterval = setInterval(() => {
 }, 10)
 
 const loadImports = () => {
+	include('common-modal-hello')
 	include('common-modal-auth')
 	include('common-chat-bot')
 	include('common-modal-product')

@@ -192,6 +192,16 @@
   background-color: var(--sky);
 }
 
+#modal-hello .modal-container {
+  width: 750px;
+  transform: translateY(100vh);
+  transition: 0.2s;
+}
+#modal-hello img {
+  width: calc(100% - 40px);
+  margin-top: 20px;
+}
+
 /* Layout */
 /* Views */
 #product-detail .info {
