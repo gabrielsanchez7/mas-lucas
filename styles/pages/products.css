@@ -1,20 +1,15 @@
-#products .banner::before {
+#products .banner__back-1 {
   background-color: var(--pink);
 }
-#products .banner::after {
+#products .banner__back-2 {
   background-color: var(--sky);
 }
 #products .banner__hero > span {
   color: var(--blue);
   font-weight: 600;
 }
-#products .banner__image {
-  width: 48%;
-  display: flex;
-  justify-content: flex-end;
-}
 #products .banner__image img {
-  width: 110%;
+  max-width: 90%;
 }
 #products .banner .shape {
   font-size: 40px;

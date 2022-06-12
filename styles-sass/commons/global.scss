@@ -24,7 +24,7 @@ b {
 
 .container {
 	margin: auto;
-	max-width: 1300px;
+	max-width: 1400px;
 	width: 100%;
 }
 
@@ -123,8 +123,7 @@ button {
 	z-index: 1;
 	padding-top: 80px;
 
-	&::before {
-		content: '';
+	.banner__back-1 {
 		position: absolute;
 		top: 0;
 		right: 50%;
@@ -133,12 +132,17 @@ button {
 		display: block;
 		background-color: var(--sky);
 		border-bottom-right-radius: 230px;
-		transform: skew(8deg) rotate(-12deg) translateY(10px);
+		transform: rotate(-90deg) translateY(-520px);
 		z-index: 1;
+		transition: 0.4s;
+
+		&.banner__back-1--started {
+			transform: skew(8deg) rotate(-12deg) translateY(10px);
+		}
+
 	}
 	
-	&::after {
-		content: '';
+	.banner__back-2 {
 		position: absolute;
 		top: 0;
 		right: 60%;
@@ -147,7 +151,13 @@ button {
 		display: block;
 		background-color: var(--pink);
 		border-bottom-right-radius: 40px;
-		transform: skew(4deg) rotate(-8deg) translateY(50px);
+		transform: rotate(-90deg) translateY(-520px);
+		transition: 0.4s;
+
+		&.banner__back-2--started {
+			transform: skew(4deg) rotate(-8deg) translateY(50px);
+		}
+
 	}
 	
 	.container {
@@ -159,17 +169,28 @@ button {
 		z-index: 1;
 		height: 100%;
 	}
-	
+
 	.banner__hero {
+		width: 40%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	
+	.banner__hero-text {
+		position: absolute;
 		color: white;
 		font-size: 65px;
 		font-weight: 300;
 		line-height: 75px;
 		padding-bottom: 70px;
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: 0.4s;
 	}
 	
-	.banner__hero b,
-	.banner__hero button {
+	.banner__hero-text b,
+	.banner__hero-text button {
 		color: inherit;
 		font-size: inherit;
 	}
@@ -181,7 +202,28 @@ button {
 	
 	.banner__image {
 		display: block;
-		max-width: 60%;
+		width: 60%;
+		height: 100%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			position: absolute;
+			transform: scale(0);
+			transition: 0.4s;
+		}
+
+		.banner__image-shadow {
+			max-width: 100%;
+		}
+
+		.banner__image-hero {
+			max-width: 80%;
+			z-index: 1;
+		}
+		
 	}
 	
 	.banner__scroll {
@@ -221,6 +263,7 @@ button {
 		width: 10px;
 		border-radius: 50%;
 		border: 1px solid white;
+		transition: 0.25s;
 	}
 	
 }

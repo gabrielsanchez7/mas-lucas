@@ -1,14 +1,14 @@
 #support {
 
-  .banner::before {
+  .banner__back-1 {
     background-color: var(--blue-text);
   }
   
-  .banner::after {
+  .banner__back-2 {
     background-color: var(--sky);
   }
   
-  .banner__hero {
+  .banner__hero-text {
     color: var(--sky);
     font-weight: 700;
   }
@@ -22,14 +22,9 @@
     margin-top: 10px;
   }
   
-  .banner__image {
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
   .banner__image img {
     width: 100%;
+    max-width: 90%;
   }
 
   .divider {

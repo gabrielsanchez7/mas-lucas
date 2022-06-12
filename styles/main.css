@@ -1012,13 +1012,13 @@
   background-color: var(--blue);
 }
 
-#support .banner::before {
+#support .banner__back-1 {
   background-color: var(--blue-text);
 }
-#support .banner::after {
+#support .banner__back-2 {
   background-color: var(--sky);
 }
-#support .banner__hero {
+#support .banner__hero-text {
   color: var(--sky);
   font-weight: 700;
 }
@@ -1030,13 +1030,9 @@
   font-weight: 400;
   margin-top: 10px;
 }
-#support .banner__image {
-  width: 60%;
-  display: flex;
-  justify-content: flex-end;
-}
 #support .banner__image img {
   width: 100%;
+  max-width: 90%;
 }
 #support .divider {
   display: flex;

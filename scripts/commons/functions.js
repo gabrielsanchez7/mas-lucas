@@ -43,7 +43,7 @@ export function allSiblings(element, selector = null) {
 /** Abre un modal */
 export function openModal(selector, closeCallback = () => {}) {
   const modal = document.querySelector(selector)
-  const modalContent = modal.querySelector('.modal-container')
+  const modalContent = modal?.querySelector('.modal-container')
 
   modal.style.display = 'flex'
   setTimeout(() => {
@@ -106,4 +106,84 @@ export async function loadProduct(container, limit) {
       }
     }
   })
+}
+
+/** Animación de inicio de los banners principales */
+export function animationIn(index = 0, callback = () => {}) {
+  const banner = document.querySelector('.banner')
+  const shadow = banner.querySelector('.banner__image-shadow')
+  const hero = banner.querySelector(`.banner__image-hero:nth-child(${index})`)
+  const square1 = banner.querySelector('.banner__back-1')
+  const square2 = banner.querySelector('.banner__back-2')
+  const heroText = banner.querySelector(`.banner__hero-text:nth-child(${index})`)
+
+  // Inicia la animación zomm in de la sombra de la imagen
+  shadow.style.transform = 'scale(1)'
+
+  // Espera 0.25 segundos para hacer zoom in sobre la imagen
+  setTimeout(() => {
+    hero.style.transform = 'scale(1)'
+
+    // Espera 0.25s para hacer la rotación del primer cuadro
+    setTimeout(() => {
+      square1.classList.add('banner__back-1--started')
+
+      // Espera 0.25s para hacer la rotación del segundo cuadro
+      setTimeout(() => {
+        square2.classList.add('banner__back-2--started')
+
+        // Espera 0.25s para hacer el efecto fade in down sobre el texto principal
+        setTimeout(() => {
+          heroText.style.transform = 'translateY(0)'
+          heroText.style.opacity = '1'
+
+          // Espera 5 segundos para ejecutar la función callback
+          setTimeout(() => {
+            callback()
+          }, 5000)
+          
+        }, 500)
+
+      }, 250)
+
+    }, 250)
+
+  }, 250)
+}
+
+/** Animación de fin de los banners principales */
+export function animationOut(index = 0, callback = () => {}) {
+  const banner = document.querySelector('.banner')
+  const shadow = banner.querySelector('.banner__image-shadow')
+  const hero = banner.querySelector(`.banner__image-hero:nth-child(${index})`)
+  const square1 = banner.querySelector('.banner__back-1')
+  const square2 = banner.querySelector('.banner__back-2')
+  const heroText = banner.querySelector(`.banner__hero-text:nth-child(${index})`)
+
+  heroText.removeAttribute('style')
+
+  setTimeout(() => {
+    square2.classList.remove('banner__back-2--started')
+
+    setTimeout(() => {
+      square1.classList.remove('banner__back-1--started')
+
+      setTimeout(() => {
+        hero.style.transform = 'scale(0)'
+
+        setTimeout(() => {
+          shadow.style.transform = 'scale(0)'
+          
+          setTimeout(() => {
+            callback()
+          }, 250)
+          
+        }, 250)
+        
+      }, 250)
+
+    }, 250)
+    
+  }, 250)
+
 }

@@ -12,10 +12,15 @@ const layoutInterval = setInterval(() => {
 
 const loadScripts = () => {
 
+	heroBanner()
 	carousel()
 	priceSelector()
 	loadProducts()
 
+}
+
+const heroBanner = () => {
+	Functions.animationIn(1)
 }
 
 /** Carrusel */

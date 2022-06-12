@@ -12,12 +12,36 @@ const layoutInterval = setInterval(() => {
 
 const loadScripts = () => {
 
-	bannerPrincipal()
+	heroBanner()
+	welcomeModal()
 	scrollButton()
 
 }
 
-const bannerPrincipal = () => {
+/** Animación de banner principal */
+const heroBanner = () => {
+	const banner = document.querySelector('.banner')
+	const bannerCounter = banner.querySelectorAll('.banner__hero-text').length
+	const dots = banner.querySelectorAll('.banner__dot')
+	let counter = 0
+
+	Functions.animationIn(1)
+
+	setInterval(() => {
+		if(counter < bannerCounter) {
+			Functions.animationOut(counter + 1, () => {
+				Functions.animationIn(counter == (bannerCounter - 1) ? 1 : counter + 2)
+				counter++
+				if(counter == bannerCounter) { counter = 0 }
+				dots[counter].classList.add('banner__dot--active')
+				const sibsDot = Functions.allSiblings(dots[counter])
+				sibsDot.forEach(sib => sib.classList.remove('banner__dot--active'))
+			})
+		}
+	}, 5000)
+}
+
+const welcomeModal = () => {
 	Functions.openModal('#modal-hello')
 }
 

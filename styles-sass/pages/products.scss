@@ -1,10 +1,10 @@
 #products {
 
-  .banner::before {
+  .banner__back-1 {
     background-color: var(--pink);
   }
   
-  .banner::after {
+  .banner__back-2 {
     background-color: var(--sky);
   }
   
@@ -13,14 +13,14 @@
     font-weight: 600;
   }
   
-  .banner__image {
-    width: 48%;
-    display: flex;
-    justify-content: flex-end;
-  }
+  // .banner__image {
+  //   width: 48%;
+  //   display: flex;
+  //   justify-content: flex-end;
+  // }
   
   .banner__image img {
-    width: 110%;
+    max-width: 90%;
   }
   
   .banner .shape {

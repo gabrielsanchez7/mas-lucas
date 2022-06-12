@@ -12,8 +12,13 @@ const layoutInterval = setInterval(() => {
 
 const loadScripts = () => {
 
+	heroBanner()
 	changeTab()
 
+}
+
+const heroBanner = () => {
+	Functions.animationIn(1)
 }
 
 /** [MIS LUCAS] Evento para cambiar de tabs */
